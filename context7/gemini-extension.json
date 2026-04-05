@@ -1,0 +1,14 @@
+{
+  "description": "Upstash Context7 MCP server for up-to-date documentation lookup. Pull version-specific documentation and code examples directly from source repositories into your LLM context.",
+  "mcpServers": {
+    "context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@2.1.6"
+      ],
+      "command": "npx"
+    }
+  },
+  "name": "context7",
+  "version": "0.1.0"
+}

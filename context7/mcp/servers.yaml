@@ -1,0 +1,18 @@
+format: plugin-kit-ai/mcp
+version: 1
+
+servers:
+  context7:
+    description: "Up-to-date, version-specific documentation and code examples from source repositories."
+    type: stdio
+    stdio:
+      command: npx
+      args:
+        - -y
+        - "@upstash/context7-mcp@2.1.6"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

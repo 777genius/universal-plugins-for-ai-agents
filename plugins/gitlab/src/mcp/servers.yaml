@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  gitlab:
+    description: "Official GitLab MCP server over HTTP with OAuth."
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://gitlab.com/api/v4/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

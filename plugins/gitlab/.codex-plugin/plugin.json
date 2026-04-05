@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "GitLab"
+  },
+  "description": "Portable GitLab MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Connect agents to GitLab so they can inspect projects, issues, merge requests, and related DevOps workflows through the official GitLab MCP server over HTTP.",
+  "homepage": "https://gitlab.com",
+  "keywords": [
+    "ai-agents",
+    "gitlab",
+    "mcp",
+    "oauth",
+    "plugins"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "gitlab",
+  "repository": "https://gitlab.com/gitlab-org/gitlab",
+  "version": "0.1.0"
+}

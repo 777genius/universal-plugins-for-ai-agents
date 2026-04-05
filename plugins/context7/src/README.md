@@ -25,6 +25,8 @@ For this plugin there is no `src/targets/codex-package/package.yaml`, because sh
 
 Everything else in the plugin root is generated and may be overwritten by `plugin-kit-ai generate`.
 
+The MCP source file now uses `api_version: v1` as the canonical schema marker. The old `format: plugin-kit-ai/mcp` plus `version: 1` shape is legacy-compat only.
+
 ## Exact Commands
 
 Run from this repository root:

@@ -20,17 +20,21 @@ Each plugin lives inside `plugins/`.
 
 Example:
 
-- `plugins/context7/plugin.yaml`
-- `plugins/context7/mcp/servers.yaml`
-- `plugins/context7/targets/...`
-- generated native artifacts committed next to the authored source
+- `plugins/context7/src/plugin.yaml`
+- `plugins/context7/src/mcp/servers.yaml`
+- optional `plugins/context7/src/targets/...`
+- `plugins/context7/src/README.md`
+- `plugins/context7/CLAUDE.md` and `plugins/context7/AGENTS.md` mark the boundary between authored and generated files
+- `plugins/context7/README.md` is generated from `plugins/context7/src/README.md`
+- generated native artifacts are committed at the plugin root
 
 ## Authoring Flow
 
 Each plugin should keep its authored source of truth in:
 
-- `plugin.yaml`
-- optional `mcp/servers.yaml`
-- optional `targets/<platform>/...`
+- `src/plugin.yaml`
+- optional `src/mcp/servers.yaml`
+- optional `src/targets/<platform>/...`
+- edit only `src/`; treat plugin-root manifests as generated outputs
 
 Then generate and validate with `plugin-kit-ai`.

@@ -82,7 +82,7 @@ keywords:
 Run the example from this repository:
 
 ```bash
-cd context7
+cd plugins/context7
 plugin-kit-ai normalize .
 plugin-kit-ai generate .
 plugin-kit-ai generate --check .
@@ -96,8 +96,8 @@ plugin-kit-ai validate . --platform cursor --strict
 If you are working from the `plugin-kit-ai` source repo instead of a globally installed CLI, use its built binary against this directory:
 
 ```bash
-../plugin-kit-ai/bin/plugin-kit-ai normalize ./context7
-../plugin-kit-ai/bin/plugin-kit-ai generate ./context7
+../plugin-kit-ai/bin/plugin-kit-ai normalize ./plugins/context7
+../plugin-kit-ai/bin/plugin-kit-ai generate ./plugins/context7
 ```
 
 ## What `generate` Produces

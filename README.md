@@ -12,17 +12,17 @@ This repository is intended to hold portable, real plugin directories that can b
 
 Current plugins:
 
-- `context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
+- `plugins/context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
 
 ## Layout
 
-Each plugin lives in its own top-level directory.
+Each plugin lives inside `plugins/`.
 
 Example:
 
-- `context7/plugin.yaml`
-- `context7/mcp/servers.yaml`
-- `context7/targets/...`
+- `plugins/context7/plugin.yaml`
+- `plugins/context7/mcp/servers.yaml`
+- `plugins/context7/targets/...`
 - generated native artifacts committed next to the authored source
 
 ## Authoring Flow

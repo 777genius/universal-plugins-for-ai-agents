@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Chrome DevTools"
+  },
+  "description": "Portable Chrome DevTools MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Launch the official Chrome DevTools MCP server so agents can inspect pages, automate flows, analyze performance, and debug browser state.",
+  "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "keywords": [
+    "ai-agents",
+    "browser",
+    "chrome",
+    "debugging",
+    "mcp",
+    "performance"
+  ],
+  "license": "Apache-2.0",
+  "mcpServers": "./.mcp.json",
+  "name": "chrome-devtools",
+  "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "version": "0.1.0"
+}

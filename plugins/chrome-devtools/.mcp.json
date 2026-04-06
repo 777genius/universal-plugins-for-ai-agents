@@ -1,0 +1,9 @@
+{
+  "chrome-devtools": {
+    "args": [
+      "-y",
+      "chrome-devtools-mcp@0.21.0"
+    ],
+    "command": "npx"
+  }
+}

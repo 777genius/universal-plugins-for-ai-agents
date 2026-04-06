@@ -1,0 +1,14 @@
+{
+  "description": "Portable Chrome DevTools MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Launch the official Chrome DevTools MCP server so agents can inspect pages, automate flows, analyze performance, and debug browser state.",
+  "mcpServers": {
+    "chrome-devtools": {
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@0.21.0"
+      ],
+      "command": "npx"
+    }
+  },
+  "name": "chrome-devtools",
+  "version": "0.1.0"
+}

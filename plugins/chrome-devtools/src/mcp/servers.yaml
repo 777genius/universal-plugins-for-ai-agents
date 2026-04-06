@@ -1,0 +1,17 @@
+api_version: v1
+
+servers:
+  chrome-devtools:
+    description: Official Chrome DevTools MCP server over local stdio.
+    type: stdio
+    stdio:
+      command: npx
+      args:
+        - -y
+        - chrome-devtools-mcp@0.21.0
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

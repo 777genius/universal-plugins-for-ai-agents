@@ -12,6 +12,7 @@ This repository is intended to hold portable, real plugin directories that can b
 
 Current plugins:
 
+- `plugins/chrome-devtools`: official Chrome DevTools MCP server packaged once for Claude, Codex, Gemini, OpenCode, and Cursor
 - `plugins/context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
 - `plugins/gitlab`: remote MCP plugin for the official GitLab MCP server on `gitlab.com` with a note about the current hosted OAuth caveat
 

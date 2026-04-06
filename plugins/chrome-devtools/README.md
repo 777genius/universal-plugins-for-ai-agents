@@ -127,6 +127,6 @@ Possible next steps, but intentionally out of scope for this v1 example:
 
 - add a second plugin variant tuned for `--slim --headless`
 - add a variant preconfigured for `--browser-url=http://127.0.0.1:9222`
-- add portable skills only if they bring clear value across targets
+- add target-specific guidance only where that target actually supports it cleanly
 
 Keep v1 small first.

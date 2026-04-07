@@ -2,7 +2,7 @@
 
 Universal plugin catalog for AI agents.
 
-This repository is intended to hold portable, real plugin directories that can be generated for multiple targets such as:
+This repository holds portable, production-ready plugin directories that can target multiple agents:
 
 - Claude
 - Codex

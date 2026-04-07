@@ -1,0 +1,20 @@
+api_version: v1
+name: firebase
+version: 0.1.0
+description: Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.
+author:
+    name: Google
+homepage: https://firebase.google.com
+license: Apache-2.0
+keywords:
+    - ai-agents
+    - firebase
+    - firestore
+    - mcp
+    - plugins
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

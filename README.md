@@ -16,6 +16,7 @@ Current plugins:
 - `plugins/context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
 - `plugins/gitlab`: remote MCP plugin for the official GitLab MCP server on `gitlab.com` with a note about the current hosted OAuth caveat
 - `plugins/github`: remote MCP plugin for official GitHub workflows through `https://api.githubcopilot.com/mcp/` with PAT header projection for all five targets
+- `plugins/firebase`: shared MCP plugin for Firebase via `firebase-tools mcp` with shared metadata and five targets (`claude`, `codex-package`, `gemini`, `opencode`, `cursor`)
 
 ## Layout
 

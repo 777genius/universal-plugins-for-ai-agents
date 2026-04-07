@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "Google"
+  },
+  "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
+  "homepage": "https://firebase.google.com",
+  "keywords": [
+    "ai-agents",
+    "firebase",
+    "firestore",
+    "mcp",
+    "plugins"
+  ],
+  "license": "Apache-2.0",
+  "mcpServers": "./.mcp.json",
+  "name": "firebase",
+  "version": "0.1.0"
+}

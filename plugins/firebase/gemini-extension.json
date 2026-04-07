@@ -1,0 +1,15 @@
+{
+  "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
+  "mcpServers": {
+    "firebase": {
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "command": "npx"
+    }
+  },
+  "name": "firebase",
+  "version": "0.1.0"
+}

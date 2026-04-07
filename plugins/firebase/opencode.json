@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "firebase": {
+      "command": [
+        "npx",
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "type": "local"
+    }
+  }
+}

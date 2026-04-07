@@ -1,0 +1,18 @@
+api_version: v1
+
+servers:
+  firebase:
+    description: Official Firebase MCP server over local stdio via firebase-tools.
+    type: stdio
+    stdio:
+      command: npx
+      args:
+        - -y
+        - firebase-tools@latest
+        - mcp
+    targets:
+      - claude
+      - codex-package
+      - cursor
+      - gemini
+      - opencode

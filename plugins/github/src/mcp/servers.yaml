@@ -1,0 +1,17 @@
+api_version: v1
+
+servers:
+  github:
+    description: Official GitHub MCP server over HTTP with personal access token auth.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://api.githubcopilot.com/mcp/"
+      headers:
+        Authorization: "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+    targets:
+      - claude
+      - codex-package
+      - cursor
+      - gemini
+      - opencode

@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "GitHub"
+  },
+  "description": "Official GitHub MCP plugin for repository management. Create issues, manage pull requests, review code, search repositories, and interact with GitHub's full API directly from Claude Code.",
+  "homepage": "https://github.com/features",
+  "keywords": [
+    "ai-agents",
+    "auth",
+    "github",
+    "mcp",
+    "plugins"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "github",
+  "repository": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+  "version": "0.1.0"
+}

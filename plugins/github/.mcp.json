@@ -1,0 +1,9 @@
+{
+  "github": {
+    "headers": {
+      "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+    },
+    "type": "http",
+    "url": "https://api.githubcopilot.com/mcp/"
+  }
+}

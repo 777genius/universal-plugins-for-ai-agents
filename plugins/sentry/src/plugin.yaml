@@ -1,0 +1,22 @@
+api_version: v1
+name: sentry
+version: 0.1.0
+description: Official Sentry hosted MCP plugin for human-in-the-loop debugging, issue triage, and incident workflows through Sentry's remote MCP service.
+author:
+    name: Sentry
+homepage: https://mcp.sentry.dev
+repository: https://github.com/getsentry/sentry-mcp
+license: FSL-1.1-Apache-2.0
+keywords:
+    - ai-agents
+    - debugging
+    - incidents
+    - mcp
+    - plugins
+    - sentry
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Sentry"
+  },
+  "description": "Official Sentry hosted MCP plugin for human-in-the-loop debugging, issue triage, and incident workflows through Sentry's remote MCP service.",
+  "homepage": "https://mcp.sentry.dev",
+  "keywords": [
+    "ai-agents",
+    "debugging",
+    "incidents",
+    "mcp",
+    "plugins",
+    "sentry"
+  ],
+  "license": "FSL-1.1-Apache-2.0",
+  "mcpServers": "./.mcp.json",
+  "name": "sentry",
+  "repository": "https://github.com/getsentry/sentry-mcp",
+  "version": "0.1.0"
+}

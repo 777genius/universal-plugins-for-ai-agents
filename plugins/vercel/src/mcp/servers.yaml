@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  vercel:
+    description: Official Vercel hosted MCP server for docs, projects, deployments, and logs over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.vercel.com"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

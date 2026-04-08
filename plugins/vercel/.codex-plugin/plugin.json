@@ -1,0 +1,17 @@
+{
+  "author": {
+    "name": "Vercel"
+  },
+  "description": "Official Vercel hosted MCP plugin for project, deployment, log, and documentation workflows through Vercel's remote MCP service.",
+  "homepage": "https://vercel.com/docs/agent-resources/vercel-mcp",
+  "keywords": [
+    "ai-agents",
+    "deployments",
+    "mcp",
+    "plugins",
+    "vercel"
+  ],
+  "mcpServers": "./.mcp.json",
+  "name": "vercel",
+  "version": "0.1.0"
+}

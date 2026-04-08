@@ -1,0 +1,10 @@
+{
+  "description": "Official Linear MCP integration for workspace management, issues, and project workflows.",
+  "mcpServers": {
+    "linear": {
+      "httpUrl": "https://mcp.linear.app/mcp"
+    }
+  },
+  "name": "linear",
+  "version": "0.1.0"
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Official Supabase MCP integration for development and database operations from agent workflows.",
+  "mcpServers": "./.mcp.json",
+  "name": "supabase",
+  "version": "0.1.0"
+}

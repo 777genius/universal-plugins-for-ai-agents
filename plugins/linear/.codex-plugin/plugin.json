@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Linear"
+  },
+  "description": "Official Linear MCP integration for workspace management, issues, and project workflows.",
+  "homepage": "https://linear.app",
+  "keywords": [
+    "ai-agents",
+    "issues",
+    "linear",
+    "mcp",
+    "plugins",
+    "project-management"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "linear",
+  "repository": "https://linear.app",
+  "version": "0.1.0"
+}

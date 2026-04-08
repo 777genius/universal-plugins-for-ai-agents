@@ -1,0 +1,22 @@
+api_version: v1
+name: linear
+version: 0.1.0
+description: Official Linear MCP integration for workspace management, issues, and project workflows.
+author:
+    name: Linear
+homepage: https://linear.app
+repository: https://linear.app
+license: MIT
+keywords:
+    - ai-agents
+    - issues
+    - linear
+    - mcp
+    - plugins
+    - project-management
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

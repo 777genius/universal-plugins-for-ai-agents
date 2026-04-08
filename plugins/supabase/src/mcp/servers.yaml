@@ -1,0 +1,17 @@
+api_version: v1
+
+servers:
+  supabase:
+    description: "Official hosted Supabase MCP server for project-scoped development workflows."
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}"
+      headers:
+        Authorization: "Bearer ${SUPABASE_ACCESS_TOKEN}"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

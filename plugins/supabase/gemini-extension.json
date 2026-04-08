@@ -1,0 +1,13 @@
+{
+  "description": "Official Supabase MCP integration for development and database operations from agent workflows.",
+  "mcpServers": {
+    "supabase": {
+      "headers": {
+        "Authorization": "Bearer ${SUPABASE_ACCESS_TOKEN}"
+      },
+      "httpUrl": "https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}"
+    }
+  },
+  "name": "supabase",
+  "version": "0.1.0"
+}

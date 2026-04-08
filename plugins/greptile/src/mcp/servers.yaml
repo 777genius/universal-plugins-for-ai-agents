@@ -1,0 +1,17 @@
+api_version: v1
+
+servers:
+  greptile:
+    description: "Official Greptile MCP server for repository context and code search."
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://api.greptile.com/mcp"
+      headers:
+        Authorization: "Bearer ${GREPTILE_API_KEY}"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

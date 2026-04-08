@@ -1,0 +1,6 @@
+{
+  "description": "Official Greptile MCP integration for repository search and code intelligence tooling.",
+  "mcpServers": "./.mcp.json",
+  "name": "greptile",
+  "version": "0.1.0"
+}

@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  linear:
+    description: "Official Linear MCP server for workspace planning, issue tracking, and project workflows."
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.linear.app/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

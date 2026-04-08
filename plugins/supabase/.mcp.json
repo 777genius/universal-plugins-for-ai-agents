@@ -1,0 +1,9 @@
+{
+  "supabase": {
+    "headers": {
+      "Authorization": "Bearer ${SUPABASE_ACCESS_TOKEN}"
+    },
+    "type": "http",
+    "url": "https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}"
+  }
+}

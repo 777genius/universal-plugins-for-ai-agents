@@ -1,0 +1,13 @@
+{
+  "description": "Official Greptile MCP integration for repository search and code intelligence tooling.",
+  "mcpServers": {
+    "greptile": {
+      "headers": {
+        "Authorization": "Bearer ${GREPTILE_API_KEY}"
+      },
+      "httpUrl": "https://api.greptile.com/mcp"
+    }
+  },
+  "name": "greptile",
+  "version": "0.1.0"
+}

@@ -1,0 +1,22 @@
+api_version: v1
+name: supabase
+version: 0.1.0
+description: Official Supabase MCP integration for development and database operations from agent workflows.
+author:
+    name: Supabase
+homepage: https://supabase.com
+repository: https://github.com/supabase-community/supabase-mcp
+license: Apache-2.0
+keywords:
+    - ai-agents
+    - backend
+    - mcp
+    - plugins
+    - postgres
+    - supabase
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

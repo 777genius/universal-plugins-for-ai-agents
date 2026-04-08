@@ -7,7 +7,7 @@ This plugin uses the canonical `src/` layout:
 
 - edit only `src/`
 - treat the plugin root as generated/native output
-- use root `CLAUDE.md` and `AGENTS.md` as boundary docs
+- use root `AGENTS.md` as the main boundary doc and `CLAUDE.md` as the Claude-specific pointer
 - read `GENERATED.md` before editing root manifest files
 
 ## What this plugin does

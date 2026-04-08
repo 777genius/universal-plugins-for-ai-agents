@@ -7,7 +7,7 @@ This plugin uses the canonical `src/` layout:
 
 - edit only `src/`
 - treat the plugin root as generated/native output
-- use root `CLAUDE.md` and `AGENTS.md` as boundary docs for humans and agents, and read root `GENERATED.md` before touching generated outputs
+- use root `AGENTS.md` as the main boundary doc, `CLAUDE.md` as the Claude-specific pointer, and `GENERATED.md` before touching generated outputs
 
 ## What This Plugin Does
 
@@ -64,7 +64,7 @@ If you are working from the `plugin-kit-ai` source repo instead of a globally in
 - `.cursor/mcp.json`
 
 `GENERATED.md` is the generated inventory of managed outputs in the plugin root.
-`README.md` is the generated mirror of this file.
+Root `README.md` is a short generated entrypoint that points readers back to this file.
 The shared `.mcp.json` is consumed by both Claude and Codex package outputs.
 
 ## Why `claude` Works Without `launcher.yaml`

@@ -7,7 +7,7 @@ This plugin uses the canonical `src/` authoring layout:
 
 - edit only `src/`
 - treat the plugin root as generated/native output
-- use root `CLAUDE.md` and `AGENTS.md` as boundary docs for generated artifacts
+- use root `AGENTS.md` as the main boundary doc, `CLAUDE.md` as the Claude-specific pointer, and `GENERATED.md` before touching generated artifacts
 - read `GENERATED.md` before editing plugin-root files
 
 ## What this plugin does

@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Notion"
+  },
+  "description": "Official Notion hosted MCP plugin for user-authorized workspace access. Search pages, read docs, edit content, and work with Notion knowledge directly from AI agents.",
+  "homepage": "https://developers.notion.com/docs/get-started-with-mcp",
+  "keywords": [
+    "ai-agents",
+    "collaboration",
+    "knowledge",
+    "mcp",
+    "notion",
+    "planning",
+    "plugins"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "notion",
+  "repository": "https://github.com/makenotion/notion-mcp-server",
+  "version": "0.1.0"
+}

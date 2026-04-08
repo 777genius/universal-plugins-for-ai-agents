@@ -1,0 +1,10 @@
+{
+  "description": "Official Notion hosted MCP plugin for user-authorized workspace access. Search pages, read docs, edit content, and work with Notion knowledge directly from AI agents.",
+  "mcpServers": {
+    "notion": {
+      "httpUrl": "https://mcp.notion.com/mcp"
+    }
+  },
+  "name": "notion",
+  "version": "0.1.0"
+}

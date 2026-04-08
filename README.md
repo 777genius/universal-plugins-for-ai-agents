@@ -18,6 +18,7 @@ Current plugins:
 - `plugins/github`: remote MCP plugin for official GitHub workflows through `https://api.githubcopilot.com/mcp/` with PAT header projection for all five targets
 - `plugins/firebase`: shared MCP plugin for Firebase via `firebase-tools mcp` with shared metadata and five targets (`claude`, `codex-package`, `gemini`, `opencode`, `cursor`)
 - `plugins/linear`: shared MCP plugin for Linear workspace, issue, and plan workflows via `https://mcp.linear.app/mcp`
+- `plugins/notion`: hosted remote-only MCP plugin for interactive OAuth-backed access to Notion docs, pages, and workspace knowledge via `https://mcp.notion.com/mcp`
 - `plugins/supabase`: shared MCP plugin for Supabase project operations via `https://mcp.supabase.com/mcp`
 - `plugins/greptile`: shared MCP plugin for Greptile repository intelligence via `https://api.greptile.com/mcp`
 
@@ -32,7 +33,7 @@ Example:
 - optional `plugins/context7/src/targets/...`
 - `plugins/context7/src/README.md`
 - `plugins/context7/CLAUDE.md` and `plugins/context7/AGENTS.md` mark the boundary between authored and generated files
-- `plugins/context7/README.md` is generated from `plugins/context7/src/README.md`
+- `plugins/context7/README.md` is a short generated entrypoint that points to `plugins/context7/src/README.md`
 - generated native artifacts are committed at the plugin root
 
 ## Authoring Flow

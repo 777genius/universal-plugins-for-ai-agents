@@ -14,7 +14,9 @@
     "mcp",
     "plugins"
   ],
+  "license": "Apache-2.0",
   "mcpServers": "./.mcp.json",
   "name": "heroku",
+  "repository": "https://github.com/heroku/heroku-mcp-server",
   "version": "0.1.0"
 }

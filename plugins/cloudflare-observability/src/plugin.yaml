@@ -5,6 +5,8 @@ description: Official Cloudflare hosted MCP plugin for logs, analytics, and prod
 author:
     name: Cloudflare
 homepage: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
+repository: https://github.com/cloudflare/mcp
+license: Apache-2.0
 keywords:
     - ai-agents
     - analytics

@@ -81,12 +81,15 @@ This v1 plugin is intentionally hosted and OAuth-first:
 
 That keeps the default install story aligned with Heroku's recommended remote setup for interactive MCP clients.
 
+Heroku also documents an official stdio path through `heroku mcp:start`.
+This catalog plugin intentionally keeps the hosted remote variant as the default package because it is easier to project consistently across all current targets without depending on a globally installed Heroku CLI.
+
 ## Out Of Scope For V1
 
 These are intentionally not part of this first version:
 
 - embedded API key or bearer-token headers in authored config
-- a local Heroku bridge process
+- the official local stdio path through `heroku mcp:start`
 - `src/skills/**`
 - runtime hooks or `launcher.yaml`
 

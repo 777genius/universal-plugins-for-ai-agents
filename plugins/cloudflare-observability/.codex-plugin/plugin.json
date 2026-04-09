@@ -15,7 +15,9 @@
     "observability",
     "plugins"
   ],
+  "license": "Apache-2.0",
   "mcpServers": "./.mcp.json",
   "name": "cloudflare-observability",
+  "repository": "https://github.com/cloudflare/mcp",
   "version": "0.1.0"
 }

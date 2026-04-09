@@ -1,0 +1,25 @@
+api_version: v1
+
+servers:
+  dockerhub:
+    description: Official Docker Hub MCP server through Docker's containerized stdio image.
+    type: stdio
+    stdio:
+      command: docker
+      args:
+        - run
+        - -i
+        - --rm
+        - -e
+        - HUB_PAT_TOKEN
+        - mcp/dockerhub
+        - --transport=stdio
+        - --username=${env:HUB_USERNAME}
+      env:
+        HUB_PAT_TOKEN: ${env:HUB_PAT_TOKEN}
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

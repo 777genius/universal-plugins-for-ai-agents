@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "dockerhub": {
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "HUB_PAT_TOKEN",
+        "mcp/dockerhub",
+        "--transport=stdio",
+        "--username=${env:HUB_USERNAME}"
+      ],
+      "environment": {
+        "HUB_PAT_TOKEN": "${env:HUB_PAT_TOKEN}"
+      },
+      "type": "local"
+    }
+  }
+}

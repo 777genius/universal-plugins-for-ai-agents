@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Cloudflare"
+  },
+  "description": "Official Cloudflare Radar MCP plugin for internet telemetry, traffic trends, and network intelligence through Cloudflare's hosted Radar server.",
+  "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "keywords": [
+    "ai-agents",
+    "analytics",
+    "cloudflare",
+    "mcp",
+    "network",
+    "plugins",
+    "radar"
+  ],
+  "license": "Apache-2.0",
+  "mcpServers": "./.mcp.json",
+  "name": "cloudflare-radar",
+  "repository": "https://github.com/cloudflare/mcp",
+  "version": "0.1.0"
+}

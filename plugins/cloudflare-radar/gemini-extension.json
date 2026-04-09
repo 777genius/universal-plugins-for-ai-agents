@@ -1,0 +1,10 @@
+{
+  "description": "Official Cloudflare Radar MCP plugin for internet telemetry, traffic trends, and network intelligence through Cloudflare's hosted Radar server.",
+  "mcpServers": {
+    "cloudflare-radar": {
+      "httpUrl": "https://radar.mcp.cloudflare.com/mcp"
+    }
+  },
+  "name": "cloudflare-radar",
+  "version": "0.1.0"
+}

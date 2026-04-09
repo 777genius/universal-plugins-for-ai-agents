@@ -1,0 +1,23 @@
+{
+  "description": "Official Docker Hub MCP plugin for repository, image, and Docker Hub workflows through Docker's containerized stdio server.",
+  "mcpServers": {
+    "dockerhub": {
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "HUB_PAT_TOKEN",
+        "mcp/dockerhub",
+        "--transport=stdio",
+        "--username=${env:HUB_USERNAME}"
+      ],
+      "command": "docker",
+      "env": {
+        "HUB_PAT_TOKEN": "${env:HUB_PAT_TOKEN}"
+      }
+    }
+  },
+  "name": "docker-hub",
+  "version": "0.1.0"
+}

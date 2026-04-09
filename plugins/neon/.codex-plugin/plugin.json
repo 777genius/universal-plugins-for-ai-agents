@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Neon"
+  },
+  "description": "Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.",
+  "homepage": "https://mcp-server-neon-jet.vercel.app",
+  "keywords": [
+    "ai-agents",
+    "database",
+    "mcp",
+    "neon",
+    "plugins",
+    "postgres"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "neon",
+  "repository": "https://github.com/neondatabase/mcp-server-neon",
+  "version": "0.1.0"
+}

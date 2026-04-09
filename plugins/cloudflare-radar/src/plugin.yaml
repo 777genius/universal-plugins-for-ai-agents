@@ -1,0 +1,23 @@
+api_version: v1
+name: cloudflare-radar
+version: 0.1.0
+description: Official Cloudflare Radar MCP plugin for internet telemetry, traffic trends, and network intelligence through Cloudflare's hosted Radar server.
+author:
+    name: Cloudflare
+homepage: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
+repository: https://github.com/cloudflare/mcp
+license: Apache-2.0
+keywords:
+    - ai-agents
+    - analytics
+    - cloudflare
+    - mcp
+    - network
+    - plugins
+    - radar
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

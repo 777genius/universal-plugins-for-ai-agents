@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  neon:
+    description: Official Neon hosted MCP server for database, branch, and Neon project workflows.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.neon.tech/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

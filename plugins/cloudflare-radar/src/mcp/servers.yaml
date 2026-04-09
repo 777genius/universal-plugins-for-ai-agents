@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  cloudflare-radar:
+    description: Official Cloudflare Radar MCP server for internet telemetry, traffic trends, and network intelligence.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://radar.mcp.cloudflare.com/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

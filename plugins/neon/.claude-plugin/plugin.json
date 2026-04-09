@@ -1,0 +1,6 @@
+{
+  "description": "Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.",
+  "mcpServers": "./.mcp.json",
+  "name": "neon",
+  "version": "0.1.0"
+}

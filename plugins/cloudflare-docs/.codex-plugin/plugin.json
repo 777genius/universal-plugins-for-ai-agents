@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "Cloudflare"
+  },
+  "description": "Official Cloudflare hosted MCP plugin for up-to-date Cloudflare documentation and reference lookups through Cloudflare's remote documentation server.",
+  "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "keywords": [
+    "ai-agents",
+    "cloud",
+    "cloudflare",
+    "docs",
+    "mcp",
+    "plugins",
+    "research"
+  ],
+  "mcpServers": "./.mcp.json",
+  "name": "cloudflare-docs",
+  "version": "0.1.0"
+}

@@ -15,10 +15,13 @@ Current plugins:
 - `plugins/atlassian`: hosted remote-first MCP plugin for Jira, Confluence, and Compass workflows via Atlassian Rovo MCP on `https://mcp.atlassian.com/v1/mcp`
 - `plugins/chrome-devtools`: official Chrome DevTools MCP server packaged once for Claude, Codex, Gemini, OpenCode, and Cursor
 - `plugins/cloudflare`: hosted OAuth-first MCP plugin for the official Cloudflare API Code Mode server on `https://mcp.cloudflare.com/mcp`
+- `plugins/cloudflare-docs`: hosted OAuth-first MCP plugin for Cloudflare's documentation server on `https://docs.mcp.cloudflare.com/mcp`
+- `plugins/cloudflare-observability`: hosted OAuth-first MCP plugin for Cloudflare's observability server on `https://observability.mcp.cloudflare.com/mcp`
 - `plugins/context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
 - `plugins/gitlab`: remote MCP plugin for the official GitLab MCP server on `gitlab.com` with a note about the current hosted OAuth caveat
 - `plugins/github`: remote MCP plugin for official GitHub workflows through `https://api.githubcopilot.com/mcp/` with PAT header projection for all five targets
 - `plugins/firebase`: shared MCP plugin for Firebase via `firebase-tools mcp` with shared metadata and five targets (`claude`, `codex-package`, `gemini`, `opencode`, `cursor`)
+- `plugins/heroku`: hosted remote-only MCP plugin for Heroku apps, logs, add-ons, and platform operations via `https://mcp.heroku.com/mcp`
 - `plugins/linear`: shared MCP plugin for Linear workspace, issue, and plan workflows via `https://mcp.linear.app/mcp`
 - `plugins/notion`: hosted remote-only MCP plugin for interactive OAuth-backed access to Notion docs, pages, and workspace knowledge via `https://mcp.notion.com/mcp`
 - `plugins/slack`: hosted remote-only MCP plugin for Slack search, messaging, canvases, and user context via `https://mcp.slack.com/mcp`, intentionally scoped to Claude and Cursor because Slack documents client-specific app identity for that path

@@ -1,0 +1,6 @@
+{
+  "cloudflare-observability": {
+    "type": "http",
+    "url": "https://observability.mcp.cloudflare.com/mcp"
+  }
+}

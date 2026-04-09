@@ -1,0 +1,10 @@
+{
+  "description": "Official Cloudflare hosted MCP plugin for up-to-date Cloudflare documentation and reference lookups through Cloudflare's remote documentation server.",
+  "mcpServers": {
+    "cloudflare-docs": {
+      "httpUrl": "https://docs.mcp.cloudflare.com/mcp"
+    }
+  },
+  "name": "cloudflare-docs",
+  "version": "0.1.0"
+}

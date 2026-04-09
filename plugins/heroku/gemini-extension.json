@@ -1,0 +1,10 @@
+{
+  "description": "Official Heroku hosted MCP plugin for apps, add-ons, logs, Postgres, and operational workflows through Heroku's remote MCP service.",
+  "mcpServers": {
+    "heroku": {
+      "httpUrl": "https://mcp.heroku.com/mcp"
+    }
+  },
+  "name": "heroku",
+  "version": "0.1.0"
+}

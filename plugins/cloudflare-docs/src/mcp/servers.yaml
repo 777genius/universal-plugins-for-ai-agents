@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  cloudflare-docs:
+    description: Official Cloudflare hosted documentation MCP server for current Cloudflare reference and product docs over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://docs.mcp.cloudflare.com/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

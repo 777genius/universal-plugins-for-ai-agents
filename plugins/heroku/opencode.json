@@ -1,0 +1,9 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "heroku": {
+      "type": "remote",
+      "url": "https://mcp.heroku.com/mcp"
+    }
+  }
+}

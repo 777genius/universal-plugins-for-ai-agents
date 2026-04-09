@@ -1,0 +1,10 @@
+{
+  "description": "Official Atlassian Rovo MCP plugin for Jira, Confluence, and Compass workflows through Atlassian's hosted remote MCP service.",
+  "mcpServers": {
+    "atlassian": {
+      "httpUrl": "https://mcp.atlassian.com/v1/mcp"
+    }
+  },
+  "name": "atlassian",
+  "version": "0.1.0"
+}

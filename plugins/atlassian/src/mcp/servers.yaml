@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  atlassian:
+    description: Official Atlassian Rovo hosted MCP server for Jira, Confluence, and Compass access over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.atlassian.com/v1/mcp"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

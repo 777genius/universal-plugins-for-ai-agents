@@ -14,5 +14,6 @@
   ],
   "mcpServers": "./.mcp.json",
   "name": "hubspot-developer",
+  "repository": "https://github.com/HubSpot/hubspot-cli",
   "version": "0.1.0"
 }

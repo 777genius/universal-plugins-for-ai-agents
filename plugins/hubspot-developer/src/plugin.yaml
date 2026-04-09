@@ -5,6 +5,7 @@ description: Local HubSpot Developer MCP integration for project scaffolding, CM
 author:
     name: HubSpot
 homepage: https://developers.hubspot.com/mcp
+repository: https://github.com/HubSpot/hubspot-cli
 keywords:
     - ai-agents
     - cms

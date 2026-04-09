@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Cloudflare"
+  },
+  "description": "Official Cloudflare API MCP plugin for token-efficient access to the Cloudflare API through Cloudflare's hosted Code Mode server.",
+  "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "keywords": [
+    "ai-agents",
+    "api",
+    "cloud",
+    "cloudflare",
+    "devops",
+    "mcp",
+    "plugins",
+    "workers"
+  ],
+  "license": "Apache-2.0",
+  "mcpServers": "./.mcp.json",
+  "name": "cloudflare",
+  "repository": "https://github.com/cloudflare/mcp",
+  "version": "0.1.0"
+}

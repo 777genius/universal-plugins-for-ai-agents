@@ -19,6 +19,7 @@ Current plugins:
 - `plugins/firebase`: shared MCP plugin for Firebase via `firebase-tools mcp` with shared metadata and five targets (`claude`, `codex-package`, `gemini`, `opencode`, `cursor`)
 - `plugins/linear`: shared MCP plugin for Linear workspace, issue, and plan workflows via `https://mcp.linear.app/mcp`
 - `plugins/notion`: hosted remote-only MCP plugin for interactive OAuth-backed access to Notion docs, pages, and workspace knowledge via `https://mcp.notion.com/mcp`
+- `plugins/slack`: hosted remote-only MCP plugin for Slack search, messaging, canvases, and user context via `https://mcp.slack.com/mcp`, intentionally scoped to Claude and Cursor because Slack documents client-specific app identity for that path
 - `plugins/stripe`: hosted remote-first MCP plugin for payments, billing, customers, and Stripe knowledge workflows via `https://mcp.stripe.com`
 - `plugins/vercel`: hosted remote-only MCP plugin for Vercel docs, projects, deployments, and logs via `https://mcp.vercel.com`
 - `plugins/sentry`: hosted remote-only MCP plugin for human-in-the-loop debugging, issues, traces, and incident workflows via `https://mcp.sentry.dev`

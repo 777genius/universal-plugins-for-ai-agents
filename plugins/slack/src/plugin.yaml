@@ -1,0 +1,18 @@
+api_version: v1
+name: slack
+version: 0.1.0
+description: Official Slack hosted MCP plugin for Slack search, messaging, canvases, and user context through Slack's remote MCP service.
+author:
+    name: Slack
+homepage: https://docs.slack.dev/ai/slack-mcp-server/
+keywords:
+    - ai-agents
+    - collaboration
+    - mcp
+    - messaging
+    - plugins
+    - search
+    - slack
+targets:
+    - claude
+    - cursor

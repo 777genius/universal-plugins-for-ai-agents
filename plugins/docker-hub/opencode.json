@@ -14,7 +14,8 @@
         "--username=${env:HUB_USERNAME}"
       ],
       "environment": {
-        "HUB_PAT_TOKEN": "${env:HUB_PAT_TOKEN}"
+        "HUB_PAT_TOKEN": "${env:HUB_PAT_TOKEN}",
+        "HUB_USERNAME": "${env:HUB_USERNAME}"
       },
       "type": "local"
     }

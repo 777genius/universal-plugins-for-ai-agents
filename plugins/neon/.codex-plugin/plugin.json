@@ -3,7 +3,7 @@
     "name": "Neon"
   },
   "description": "Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.",
-  "homepage": "https://mcp-server-neon-jet.vercel.app",
+  "homepage": "https://mcp.neon.tech/",
   "keywords": [
     "ai-agents",
     "database",

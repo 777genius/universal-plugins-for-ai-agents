@@ -17,6 +17,7 @@ servers:
         - --username=${env:HUB_USERNAME}
       env:
         HUB_PAT_TOKEN: ${env:HUB_PAT_TOKEN}
+        HUB_USERNAME: ${env:HUB_USERNAME}
     targets:
       - claude
       - codex-package

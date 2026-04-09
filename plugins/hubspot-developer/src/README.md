@@ -81,6 +81,9 @@ This v1 plugin is intentionally local and CLI-backed:
 
 The `npx -p @hubspot/cli@8.3.0 hs mcp start` path avoids requiring a globally preinstalled `hs` binary.
 
+HubSpot's official docs describe the Developer MCP server as GA and generally onboard users through `hs mcp setup`.
+This catalog plugin intentionally packages the same local MCP server as a portable, reproducible stdio definition instead of relying on an interactive setup step.
+
 ## Why This Is Separate From `hubspot-crm`
 
 HubSpot exposes two very different MCP shapes:

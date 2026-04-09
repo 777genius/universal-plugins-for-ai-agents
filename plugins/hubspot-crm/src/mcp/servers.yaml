@@ -2,7 +2,7 @@ api_version: v1
 
 servers:
   hubspot-crm:
-    description: Official HubSpot remote MCP server for CRM records, tickets, reporting, and account workflows.
+    description: Official HubSpot remote MCP server for beta, read-only CRM object access.
     type: remote
     remote:
       protocol: streamable_http

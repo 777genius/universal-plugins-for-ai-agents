@@ -12,12 +12,12 @@ This plugin uses the canonical `src/` layout:
 ## What This Plugin Does
 
 This plugin connects agents to HubSpot's remote MCP service at `https://mcp.hubspot.com`.
-It is the CRM-facing HubSpot path for records, tickets, reporting, and account workflows.
+It is the CRM-facing HubSpot path for beta, read-only access to CRM objects and account context.
 
 Typical use cases:
 
-- inspect contacts, companies, deals, tickets, and related CRM context from the same workflow as active implementation or support work
-- search and retrieve HubSpot records and workspace data without building a custom bridge first
+- inspect contacts, companies, deals, tickets, invoices, and related CRM context from the same workflow as active implementation or support work
+- search and retrieve HubSpot CRM records without building a custom bridge first
 - pull business context into an agent session before changing product, support, or growth flows
 
 ## Source Of Truth
@@ -79,7 +79,12 @@ This v1 plugin is intentionally hosted and OAuth-first:
 - no bearer-token headers in authored config
 - no local runtime or launcher path
 
-Important: HubSpot's remote MCP flow expects a user-owned MCP auth app and PKCE-based login.
+Important:
+
+- HubSpot documents the remote MCP server as **BETA**
+- the current server surface is **read-only** for supported CRM objects
+- HubSpot's remote MCP flow expects a user-owned MCP auth app and PKCE-based login
+
 That means this catalog plugin gives you the correct portable server definition, but you still need to complete the client-specific auth setup in the tool you are using.
 
 ## Why This Is Separate From `hubspot-developer`

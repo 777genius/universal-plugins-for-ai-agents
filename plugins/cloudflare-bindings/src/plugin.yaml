@@ -5,8 +5,8 @@ description: Official Cloudflare Workers Bindings MCP integration for storage, A
 author:
     name: Cloudflare
 homepage: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
-repository: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
-license: MIT
+repository: https://github.com/cloudflare/mcp
+license: Apache-2.0
 keywords:
     - ai-agents
     - bindings

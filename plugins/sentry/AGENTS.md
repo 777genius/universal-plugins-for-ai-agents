@@ -14,9 +14,7 @@ After changing `src/`, run:
 plugin-kit-ai normalize .
 plugin-kit-ai generate .
 plugin-kit-ai generate --check .
-plugin-kit-ai validate . --platform claude --strict
-plugin-kit-ai validate . --platform codex-package --strict
-plugin-kit-ai validate . --platform gemini --strict
-plugin-kit-ai validate . --platform opencode --strict
-plugin-kit-ai validate . --platform cursor --strict
+plugin-kit-ai inspect . --format json
 ```
+
+Then run `plugin-kit-ai validate . --platform <enabled-target> --strict` for each enabled target listed in the inspection output.

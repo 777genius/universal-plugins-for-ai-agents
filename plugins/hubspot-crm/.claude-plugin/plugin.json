@@ -1,0 +1,6 @@
+{
+  "description": "Official HubSpot remote MCP integration for CRM records, tickets, reporting, and workspace workflows.",
+  "mcpServers": "./.mcp.json",
+  "name": "hubspot-crm",
+  "version": "0.1.0"
+}

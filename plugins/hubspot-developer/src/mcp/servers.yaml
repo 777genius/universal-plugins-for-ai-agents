@@ -1,0 +1,24 @@
+api_version: v1
+
+servers:
+  hubspot-developer:
+    description: Local HubSpot Developer MCP server over stdio via the HubSpot CLI.
+    type: stdio
+    stdio:
+      command: npx
+      args:
+        - -y
+        - -p
+        - "@hubspot/cli@8.3.0"
+        - hs
+        - mcp
+        - start
+      env:
+        HUBSPOT_MCP_STANDALONE: "true"
+        HUBSPOT_CLI_VERSION: "8.3.0"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

@@ -1,0 +1,10 @@
+{
+  "description": "Official Cloudflare Workers Bindings MCP integration for storage, AI, and compute primitives.",
+  "mcpServers": {
+    "cloudflare-bindings": {
+      "httpUrl": "https://bindings.mcp.cloudflare.com/mcp"
+    }
+  },
+  "name": "cloudflare-bindings",
+  "version": "0.1.0"
+}

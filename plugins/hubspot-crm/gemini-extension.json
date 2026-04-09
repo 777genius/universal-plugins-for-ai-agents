@@ -1,0 +1,10 @@
+{
+  "description": "Official HubSpot remote MCP integration for CRM records, tickets, reporting, and workspace workflows.",
+  "mcpServers": {
+    "hubspot-crm": {
+      "httpUrl": "https://mcp.hubspot.com"
+    }
+  },
+  "name": "hubspot-crm",
+  "version": "0.1.0"
+}

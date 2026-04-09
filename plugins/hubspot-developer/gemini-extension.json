@@ -1,0 +1,22 @@
+{
+  "description": "Local HubSpot Developer MCP integration for project scaffolding, CMS, builds, logs, and app workflows via the HubSpot CLI.",
+  "mcpServers": {
+    "hubspot-developer": {
+      "args": [
+        "-y",
+        "-p",
+        "@hubspot/cli@8.3.0",
+        "hs",
+        "mcp",
+        "start"
+      ],
+      "command": "npx",
+      "env": {
+        "HUBSPOT_CLI_VERSION": "8.3.0",
+        "HUBSPOT_MCP_STANDALONE": "true"
+      }
+    }
+  },
+  "name": "hubspot-developer",
+  "version": "0.1.0"
+}

@@ -1,0 +1,22 @@
+api_version: v1
+name: hubspot-crm
+version: 0.1.0
+description: Official HubSpot remote MCP integration for CRM records, tickets, reporting, and workspace workflows.
+author:
+    name: HubSpot
+homepage: https://developers.hubspot.com/mcp
+repository: https://developers.hubspot.com/mcp
+license: MIT
+keywords:
+    - ai-agents
+    - crm
+    - hubspot
+    - mcp
+    - plugins
+    - sales
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

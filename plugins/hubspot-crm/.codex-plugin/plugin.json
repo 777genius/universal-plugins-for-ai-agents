@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "HubSpot"
+  },
+  "description": "Official HubSpot remote MCP integration for CRM records, tickets, reporting, and workspace workflows.",
+  "homepage": "https://developers.hubspot.com/mcp",
+  "keywords": [
+    "ai-agents",
+    "crm",
+    "hubspot",
+    "mcp",
+    "plugins",
+    "sales"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "hubspot-crm",
+  "repository": "https://developers.hubspot.com/mcp",
+  "version": "0.1.0"
+}

@@ -1,0 +1,20 @@
+{
+  "author": {
+    "name": "Cloudflare"
+  },
+  "description": "Official Cloudflare Workers Bindings MCP integration for storage, AI, and compute primitives.",
+  "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "keywords": [
+    "ai-agents",
+    "bindings",
+    "cloudflare",
+    "mcp",
+    "plugins",
+    "workers"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "cloudflare-bindings",
+  "repository": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "version": "0.1.0"
+}

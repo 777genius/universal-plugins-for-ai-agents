@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "hubspot-developer": {
+      "command": [
+        "npx",
+        "-y",
+        "-p",
+        "@hubspot/cli@8.3.0",
+        "hs",
+        "mcp",
+        "start"
+      ],
+      "environment": {
+        "HUBSPOT_CLI_VERSION": "8.3.0",
+        "HUBSPOT_MCP_STANDALONE": "true"
+      },
+      "type": "local"
+    }
+  }
+}

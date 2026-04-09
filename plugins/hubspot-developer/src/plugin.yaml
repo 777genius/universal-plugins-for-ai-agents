@@ -1,0 +1,22 @@
+api_version: v1
+name: hubspot-developer
+version: 0.1.0
+description: Local HubSpot Developer MCP integration for project scaffolding, CMS, builds, logs, and app workflows via the HubSpot CLI.
+author:
+    name: HubSpot
+homepage: https://developers.hubspot.com/mcp
+repository: https://developers.hubspot.com/mcp
+license: MIT
+keywords:
+    - ai-agents
+    - cms
+    - developer-tools
+    - hubspot
+    - mcp
+    - plugins
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

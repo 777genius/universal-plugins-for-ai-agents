@@ -1,0 +1,22 @@
+api_version: v1
+name: cloudflare-bindings
+version: 0.1.0
+description: Official Cloudflare Workers Bindings MCP integration for storage, AI, and compute primitives.
+author:
+    name: Cloudflare
+homepage: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
+repository: https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/
+license: MIT
+keywords:
+    - ai-agents
+    - bindings
+    - cloudflare
+    - mcp
+    - plugins
+    - workers
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

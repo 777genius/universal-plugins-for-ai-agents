@@ -20,7 +20,6 @@ These committed root docs are guidance files and are not generated outputs:
 - `.codex-plugin/plugin.json`
 - `.cursor/mcp.json`
 - `.mcp.json`
-- `AGENTS.md`
 - `GENERATED.md`
 - `README.md`
 - `gemini-extension.json`

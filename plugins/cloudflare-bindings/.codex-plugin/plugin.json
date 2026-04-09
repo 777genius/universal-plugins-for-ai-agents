@@ -12,9 +12,9 @@
     "plugins",
     "workers"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "mcpServers": "./.mcp.json",
   "name": "cloudflare-bindings",
-  "repository": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "repository": "https://github.com/cloudflare/mcp",
   "version": "0.1.0"
 }

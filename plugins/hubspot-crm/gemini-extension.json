@@ -1,5 +1,5 @@
 {
-  "description": "Official HubSpot remote MCP integration for CRM records, tickets, reporting, and workspace workflows.",
+  "description": "Official HubSpot remote MCP integration for beta, read-only CRM object access through HubSpot's hosted MCP server.",
   "mcpServers": {
     "hubspot-crm": {
       "httpUrl": "https://mcp.hubspot.com"

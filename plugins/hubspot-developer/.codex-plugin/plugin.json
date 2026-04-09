@@ -12,9 +12,7 @@
     "mcp",
     "plugins"
   ],
-  "license": "MIT",
   "mcpServers": "./.mcp.json",
   "name": "hubspot-developer",
-  "repository": "https://developers.hubspot.com/mcp",
   "version": "0.1.0"
 }

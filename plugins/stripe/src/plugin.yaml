@@ -1,0 +1,21 @@
+api_version: v1
+name: stripe
+version: 0.1.0
+description: Official Stripe hosted MCP plugin for payments, billing, customer, and documentation workflows through Stripe's remote MCP service.
+author:
+    name: Stripe
+homepage: https://docs.stripe.com/mcp
+keywords:
+    - ai-agents
+    - billing
+    - commerce
+    - mcp
+    - payments
+    - plugins
+    - stripe
+targets:
+    - claude
+    - codex-package
+    - cursor
+    - gemini
+    - opencode

@@ -1,0 +1,10 @@
+{
+  "description": "Official Stripe hosted MCP plugin for payments, billing, customer, and documentation workflows through Stripe's remote MCP service.",
+  "mcpServers": {
+    "stripe": {
+      "httpUrl": "https://mcp.stripe.com"
+    }
+  },
+  "name": "stripe",
+  "version": "0.1.0"
+}

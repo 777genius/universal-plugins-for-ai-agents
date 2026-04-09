@@ -1,0 +1,15 @@
+api_version: v1
+
+servers:
+  stripe:
+    description: Official Stripe hosted MCP server for payments, billing, customer, and documentation workflows over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.stripe.com"
+    targets:
+      - claude
+      - codex-package
+      - gemini
+      - opencode
+      - cursor

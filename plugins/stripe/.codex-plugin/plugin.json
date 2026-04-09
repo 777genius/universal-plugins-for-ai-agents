@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "Stripe"
+  },
+  "description": "Official Stripe hosted MCP plugin for payments, billing, customer, and documentation workflows through Stripe's remote MCP service.",
+  "homepage": "https://docs.stripe.com/mcp",
+  "keywords": [
+    "ai-agents",
+    "billing",
+    "commerce",
+    "mcp",
+    "payments",
+    "plugins",
+    "stripe"
+  ],
+  "mcpServers": "./.mcp.json",
+  "name": "stripe",
+  "version": "0.1.0"
+}

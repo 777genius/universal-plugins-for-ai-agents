@@ -37,27 +37,52 @@ Current plugins:
 - `plugins/supabase`: shared MCP plugin for Supabase project operations via `https://mcp.supabase.com/mcp`
 - `plugins/greptile`: shared MCP plugin for Greptile repository intelligence via `https://api.greptile.com/mcp`
 
+## Discovery And Marketplace Use
+
+This repository now ships root marketplace catalogs for the ecosystems that officially support them:
+
+- Claude Code marketplace catalog: `.claude-plugin/marketplace.json`
+- Codex repo marketplace catalog: `.agents/plugins/marketplace.json`
+
+Claude Code can add this repository directly as a marketplace:
+
+```text
+/plugin marketplace add 777genius/universal-plugins-for-ai-agents
+```
+
+Then install any listed plugin:
+
+```text
+/plugin install context7@universal-plugins-for-ai-agents
+```
+
+Codex reads repo-local marketplaces from `.agents/plugins/marketplace.json`. Clone this repository, open it as the working repo in Codex, and the marketplace will be available from the local repo catalog.
+
+Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository is a multi-plugin catalog, so it keeps per-plugin `gemini-extension.json` files under `plugins/*/` and is not a single gallery entry by itself.
+
+Cursor and OpenCode do not currently use the same repo-root marketplace manifest pattern here. Their native generated artifacts stay committed inside each plugin directory.
+
 ## Layout
 
 Each plugin lives inside `plugins/`.
 
 Example:
 
-- `plugins/context7/src/plugin.yaml`
-- `plugins/context7/src/mcp/servers.yaml`
-- optional `plugins/context7/src/targets/...`
-- `plugins/context7/src/README.md`
+- `plugins/context7/plugin/plugin.yaml`
+- `plugins/context7/plugin/mcp/servers.yaml`
+- optional `plugins/context7/plugin/targets/...`
+- `plugins/context7/plugin/README.md`
 - `plugins/context7/CLAUDE.md` and `plugins/context7/AGENTS.md` mark the boundary between authored and generated files
-- `plugins/context7/README.md` is a short generated entrypoint that points to `plugins/context7/src/README.md`
+- `plugins/context7/README.md` is a short generated entrypoint that points to `plugins/context7/plugin/README.md`
 - generated native artifacts are committed at the plugin root
 
 ## Authoring Flow
 
 Each plugin should keep its authored source of truth in:
 
-- `src/plugin.yaml`
-- optional `src/mcp/servers.yaml`
-- optional `src/targets/<platform>/...`
-- edit only `src/`; treat plugin-root manifests as generated outputs
+- `plugin/plugin.yaml`
+- optional `plugin/mcp/servers.yaml`
+- optional `plugin/targets/<platform>/...`
+- edit only `plugin/`; treat plugin-root manifests as generated outputs
 
 Then generate and validate with `plugin-kit-ai`.

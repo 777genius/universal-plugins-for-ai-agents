@@ -1,0 +1,100 @@
+# linear
+
+`linear` is a real portable MCP plugin in this catalog.
+It shows the fastest clean path for authoring one plugin once and generating working outputs for `claude`, `codex-package`, `gemini`, `opencode`, and `cursor`.
+
+This plugin uses the canonical `plugin/` layout:
+
+- edit only `plugin/`
+- treat the plugin root as generated/native output
+- use root `AGENTS.md` as the main boundary doc, `CLAUDE.md` as the Claude-specific pointer, and `GENERATED.md` before touching generated outputs
+
+## What This Plugin Does
+
+It installs Linear’s official MCP server via `npx mcp-remote https://mcp.linear.app/mcp` and projects it into five targets from one authored source.
+
+## Source Of Truth
+
+Author only these files by hand:
+
+- `plugin/plugin.yaml`
+- `plugin/mcp/servers.yaml`
+- `plugin/README.md`
+
+For this plugin there is no `plugin/targets/codex-package/package.yaml`, because shared package metadata now lives in `plugin/plugin.yaml`.
+
+Everything else in the plugin root is generated and may be overwritten by `plugin-kit-ai generate`.
+
+The MCP source file now uses `api_version: v1` as the canonical schema marker. The old `format: plugin-kit-ai/mcp` plus `version: 1` shape is legacy-compat only.
+
+## Exact Commands
+
+Run from this repository root:
+
+```bash
+cd plugins/linear
+plugin-kit-ai normalize .
+plugin-kit-ai generate .
+plugin-kit-ai generate --check .
+plugin-kit-ai validate . --platform claude --strict
+plugin-kit-ai validate . --platform codex-package --strict
+plugin-kit-ai validate . --platform gemini --strict
+plugin-kit-ai validate . --platform opencode --strict
+plugin-kit-ai validate . --platform cursor --strict
+```
+
+If you are working from the `plugin-kit-ai` source repo instead of a globally installed CLI, use its built binary against this directory:
+
+```bash
+../plugin-kit-ai/bin/plugin-kit-ai normalize ./plugins/linear
+../plugin-kit-ai/bin/plugin-kit-ai generate ./plugins/linear
+```
+
+## Generated Outputs
+
+`plugin-kit-ai generate .` writes these managed root artifacts:
+
+- `GENERATED.md`
+- `README.md`
+- `.claude-plugin/plugin.json`
+- `.codex-plugin/plugin.json`
+- `.mcp.json`
+- `gemini-extension.json`
+- `opencode.json`
+- `.cursor/mcp.json`
+
+`GENERATED.md` is the generated inventory of managed outputs in the plugin root.
+Root `README.md` is a short generated entrypoint that points readers back to this file.
+The shared `.mcp.json` is consumed by both Claude and Codex package outputs.
+
+## Why `claude` Works Without `launcher.yaml`
+
+This plugin intentionally has:
+
+- no `plugin/launcher.yaml`
+- no `hooks/hooks.json`
+
+That is valid because the Claude target now supports package-only mode when the plugin only uses package/config surfaces such as portable MCP and optional package metadata.
+
+## Why `codex-package`, Not `codex-runtime`
+
+`codex-runtime` is the repo-local notify/runtime lane.
+`linear` is a portable MCP package, so `codex-package` is the correct target.
+
+## Why Remote HTTP
+
+This plugin uses remote MCP transport for all targets.
+
+- it matches the official Linear MCP endpoint published in docs
+- it reuses one source for the same server config across five targets
+- it keeps the example close to real production setup for hosted MCP
+
+## How To Extend Later
+
+Possible next steps, but intentionally out of scope for this v1 example:
+
+- switch or add a remote MCP transport
+- wire API-key-based auth headers
+- add more target-native metadata where it gives real value
+
+Keep v1 small first.

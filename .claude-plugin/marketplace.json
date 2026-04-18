@@ -1,0 +1,157 @@
+{
+  "name": "universal-plugins-for-ai-agents",
+  "owner": {
+    "name": "777genius"
+  },
+  "metadata": {
+    "description": "Portable Claude Code plugin marketplace for the universal-plugins-for-ai-agents repository.",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "atlassian",
+      "source": "./plugins/atlassian",
+      "description": "Official Atlassian Rovo MCP plugin for Jira, Confluence, and Compass workflows through Atlassian's hosted remote MCP service.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "chrome-devtools",
+      "source": "./plugins/chrome-devtools",
+      "description": "Portable Chrome DevTools MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Launch the official Chrome DevTools MCP server so agents can inspect pages, automate flows, analyze performance, and debug browser state.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "cloudflare",
+      "source": "./plugins/cloudflare",
+      "description": "Official Cloudflare API MCP plugin for token-efficient access to the Cloudflare API through Cloudflare's hosted Code Mode server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "cloudflare-bindings",
+      "source": "./plugins/cloudflare-bindings",
+      "description": "Official Cloudflare Workers Bindings MCP integration for storage, AI, and compute primitives.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "cloudflare-docs",
+      "source": "./plugins/cloudflare-docs",
+      "description": "Official Cloudflare hosted MCP plugin for up-to-date Cloudflare documentation and reference lookups through Cloudflare's remote documentation server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "cloudflare-observability",
+      "source": "./plugins/cloudflare-observability",
+      "description": "Official Cloudflare hosted MCP plugin for logs, analytics, and production debugging through Cloudflare's remote observability server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "cloudflare-radar",
+      "source": "./plugins/cloudflare-radar",
+      "description": "Official Cloudflare Radar MCP plugin for internet telemetry, traffic trends, and network intelligence through Cloudflare's hosted Radar server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "context7",
+      "source": "./plugins/context7",
+      "description": "Portable Context7 MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Pull up-to-date, version-specific documentation and code examples directly from source repositories into agent context.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "docker-hub",
+      "source": "./plugins/docker-hub",
+      "description": "Official Docker Hub MCP plugin for repository, image, and Docker Hub workflows through Docker's containerized stdio server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "firebase",
+      "source": "./plugins/firebase",
+      "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "github",
+      "source": "./plugins/github",
+      "description": "Official GitHub MCP plugin for repository management. Create issues, manage pull requests, review code, search repositories, and interact with GitHub's full API directly from Claude Code.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "gitlab",
+      "source": "./plugins/gitlab",
+      "description": "Portable GitLab MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Connect agents to GitLab so they can inspect projects, issues, merge requests, and related DevOps workflows through the official GitLab MCP server over HTTP.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "greptile",
+      "source": "./plugins/greptile",
+      "description": "Official Greptile MCP integration for repository search and code intelligence tooling.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "heroku",
+      "source": "./plugins/heroku",
+      "description": "Official Heroku hosted MCP plugin for apps, add-ons, logs, Postgres, and operational workflows through Heroku's remote MCP service.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "hubspot-crm",
+      "source": "./plugins/hubspot-crm",
+      "description": "Official HubSpot remote MCP integration for beta, read-only CRM object access through HubSpot's hosted MCP server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "hubspot-developer",
+      "source": "./plugins/hubspot-developer",
+      "description": "Local HubSpot Developer MCP integration for project scaffolding, CMS, builds, logs, and app workflows via the HubSpot CLI.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "linear",
+      "source": "./plugins/linear",
+      "description": "Official Linear MCP integration for workspace management, issues, and project workflows.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "neon",
+      "source": "./plugins/neon",
+      "description": "Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "notion",
+      "source": "./plugins/notion",
+      "description": "Official Notion hosted MCP plugin for user-authorized workspace access. Search pages, read docs, edit content, and work with Notion knowledge directly from AI agents.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "sentry",
+      "source": "./plugins/sentry",
+      "description": "Official Sentry hosted MCP plugin for human-in-the-loop debugging, issue triage, and incident workflows through Sentry's remote MCP service.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "slack",
+      "source": "./plugins/slack",
+      "description": "Official Slack hosted MCP plugin for Slack search, messaging, canvases, and user context through Slack's remote MCP service.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "stripe",
+      "source": "./plugins/stripe",
+      "description": "Official Stripe hosted MCP plugin for payments, billing, customer, and documentation workflows through Stripe's remote MCP service.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "supabase",
+      "source": "./plugins/supabase",
+      "description": "Official Supabase MCP integration for development and database operations from agent workflows.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "vercel",
+      "source": "./plugins/vercel",
+      "description": "Official Vercel hosted MCP plugin for project, deployment, log, and documentation workflows through Vercel's remote MCP service.",
+      "version": "0.1.0"
+    }
+  ]
+}

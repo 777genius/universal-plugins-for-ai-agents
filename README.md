@@ -62,6 +62,11 @@ Gemini is different. Official Gemini gallery indexing is repository-rooted and e
 
 Cursor and OpenCode do not currently use the same repo-root marketplace manifest pattern here. Their native generated artifacts stay committed inside each plugin directory.
 
+Marketplace drift is also gated in CI:
+
+- `python3 scripts/validate_marketplaces.py` verifies that the Claude and Codex root catalogs stay aligned with the checked-in plugin manifests under `plugins/*`
+- `.github/workflows/marketplace-visibility.yml` runs `codex-plugin-scanner==2.0.12` across the Claude, Codex, Gemini, and OpenCode ecosystems and uploads JSON scan artifacts for review
+
 ## Layout
 
 Each plugin lives inside `plugins/`.

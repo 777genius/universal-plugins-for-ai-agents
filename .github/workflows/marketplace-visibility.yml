@@ -1,0 +1,114 @@
+name: marketplace-visibility
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-marketplace-catalogs:
+    name: validate-marketplace-catalogs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Validate marketplace catalogs stay in sync
+        run: python3 scripts/validate_marketplaces.py
+
+  scanner-visibility:
+    name: scanner-${{ matrix.ecosystem }}
+    needs: validate-marketplace-catalogs
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ecosystem:
+          - claude
+          - codex
+          - gemini
+          - opencode
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: .github/requirements/marketplace-visibility.txt
+
+      - name: Install marketplace scanner
+        run: python3 -m pip install -r .github/requirements/marketplace-visibility.txt
+
+      - name: Run scanner
+        run: |
+          mkdir -p reports
+          codex-plugin-scanner scan . \
+            --ecosystem "${{ matrix.ecosystem }}" \
+            --fail-on-severity high \
+            --cisco-skill-scan off \
+            --cisco-mcp-scan off \
+            --format json \
+            --output "reports/${{ matrix.ecosystem }}.json"
+
+      - name: Summarize scanner report
+        if: always()
+        env:
+          ECOSYSTEM: ${{ matrix.ecosystem }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          ecosystem = os.environ["ECOSYSTEM"]
+          report_path = Path("reports") / f"{ecosystem}.json"
+          if not report_path.exists():
+              raise SystemExit(f"Missing scanner report: {report_path}")
+
+          data = json.loads(report_path.read_text())
+          findings = data.get("findings", [])
+          counts = {}
+          for finding in findings:
+              severity = finding.get("severity", "unknown")
+              counts[severity] = counts.get(severity, 0) + 1
+
+          ordered = ["critical", "high", "medium", "low", "info", "unknown"]
+          summary_parts = [f"{severity}={counts.get(severity, 0)}" for severity in ordered if counts.get(severity, 0)]
+          summary_line = ", ".join(summary_parts) if summary_parts else "no findings"
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as fh:
+              fh.write(f"### {ecosystem}\n")
+              fh.write(f"- Findings: {len(findings)}\n")
+              fh.write(f"- Severity summary: {summary_line}\n")
+
+              top_findings = findings[:5]
+              if top_findings:
+                  fh.write("- Sample findings:\n")
+                  for finding in top_findings:
+                      title = finding.get("title", "untitled")
+                      severity = finding.get("severity", "unknown")
+                      path = finding.get("path") or "repo-root"
+                      fh.write(f"  - [{severity}] {title} - {path}\n")
+          PY
+
+      - name: Upload scanner report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scanner-report-${{ matrix.ecosystem }}
+          path: reports/${{ matrix.ecosystem }}.json
+          if-no-files-found: error

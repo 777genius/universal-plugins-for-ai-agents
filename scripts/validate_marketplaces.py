@@ -6,6 +6,17 @@ import json
 import sys
 from pathlib import Path
 
+from sync_cursor_marketplace import (
+    CURSOR_MARKETPLACE_PATH,
+    build_cursor_marketplace_doc,
+    discover_cursor_plugins,
+)
+from sync_gemini_marketplace import (
+    GEMINI_MARKETPLACE_PATH,
+    build_gemini_marketplace_doc,
+    discover_gemini_plugins,
+)
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PLUGINS_ROOT = REPO_ROOT / "plugins"
@@ -191,11 +202,64 @@ def validate_codex_marketplace(errors: list[str]) -> None:
             )
 
 
+def validate_cursor_marketplace(errors: list[str]) -> None:
+    marketplace = load_json(CURSOR_MARKETPLACE_PATH)
+    expected_plugins = discover_cursor_plugins()
+    expected_marketplace = build_cursor_marketplace_doc(expected_plugins)
+
+    if marketplace != expected_marketplace:
+        errors.append(
+            f"{CURSOR_MARKETPLACE_PATH}: marketplace manifest drift detected. "
+            "Run python3 scripts/sync_cursor_marketplace.py to regenerate it."
+        )
+
+    expected_names = [plugin["name"] for plugin in expected_plugins]
+    actual_plugins = marketplace.get("plugins")
+    if not isinstance(actual_plugins, list):
+        errors.append(f"{CURSOR_MARKETPLACE_PATH}: plugins must be an array")
+        return
+
+    actual_names = [plugin.get("name") for plugin in actual_plugins]
+    if actual_names != expected_names:
+        errors.append(
+            f"{CURSOR_MARKETPLACE_PATH}: plugin order or membership drift. "
+            f"expected {expected_names}, got {actual_names}"
+        )
+
+    for plugin in expected_plugins:
+        manifest_path = plugin["plugin_dir"] / ".cursor-plugin" / "plugin.json"
+        try:
+            actual_manifest = load_json(manifest_path)
+        except SystemExit as exc:
+            errors.append(str(exc))
+            continue
+
+        if actual_manifest != plugin["cursor_manifest"]:
+            errors.append(
+                f"{manifest_path}: Cursor plugin manifest drift detected. "
+                "Run python3 scripts/sync_cursor_marketplace.py to regenerate it."
+            )
+
+
+def validate_gemini_marketplace(errors: list[str]) -> None:
+    marketplace = load_json(GEMINI_MARKETPLACE_PATH)
+    expected_plugins = discover_gemini_plugins()
+    expected_marketplace = build_gemini_marketplace_doc(expected_plugins)
+
+    if marketplace != expected_marketplace:
+        errors.append(
+            f"{GEMINI_MARKETPLACE_PATH}: Gemini root extension drift detected. "
+            "Run python3 scripts/sync_gemini_marketplace.py to regenerate it."
+        )
+
+
 def main() -> int:
     errors: list[str] = []
 
     validate_claude_marketplace(errors)
     validate_codex_marketplace(errors)
+    validate_cursor_marketplace(errors)
+    validate_gemini_marketplace(errors)
 
     if errors:
         print("Marketplace validation failed:", file=sys.stderr)
@@ -205,9 +269,12 @@ def main() -> int:
 
     claude_count = len(discover_plugin_manifests(".claude-plugin"))
     codex_count = len(discover_plugin_manifests(".codex-plugin"))
+    cursor_count = len(discover_cursor_plugins())
+    gemini_count = len(discover_gemini_plugins())
     print(
         "Marketplace catalogs are in sync "
-        f"(Claude: {claude_count} plugins, Codex: {codex_count} plugins)."
+        f"(Claude: {claude_count} plugins, Codex: {codex_count} plugins, "
+        f"Cursor: {cursor_count} plugins, Gemini: {gemini_count} plugins)."
     )
     return 0
 

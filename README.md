@@ -12,37 +12,43 @@ This repository holds portable, production-ready plugin directories that already
 
 Current plugins:
 
-- `plugins/atlassian`: hosted remote-first MCP plugin for Jira, Confluence, and Compass workflows via Atlassian Rovo MCP on `https://mcp.atlassian.com/v1/mcp`
-- `plugins/chrome-devtools`: official Chrome DevTools MCP server packaged once for Claude, Codex, Gemini, OpenCode, and Cursor
-- `plugins/cloudflare`: hosted OAuth-first MCP plugin for the official Cloudflare API Code Mode server on `https://mcp.cloudflare.com/mcp`
-- `plugins/cloudflare-bindings`: hosted OAuth-first MCP plugin for Cloudflare Workers Bindings on `https://bindings.mcp.cloudflare.com/mcp`
-- `plugins/cloudflare-docs`: hosted OAuth-first MCP plugin for Cloudflare's documentation server on `https://docs.mcp.cloudflare.com/mcp`
-- `plugins/cloudflare-observability`: hosted OAuth-first MCP plugin for Cloudflare's observability server on `https://observability.mcp.cloudflare.com/mcp`
-- `plugins/cloudflare-radar`: hosted OAuth-first MCP plugin for Cloudflare Radar internet telemetry and trend workflows on `https://radar.mcp.cloudflare.com/mcp`
-- `plugins/context7`: shared MCP-first documentation lookup plugin based on `@upstash/context7-mcp`
-- `plugins/docker-hub`: local stdio MCP plugin for Docker Hub repositories and image workflows via Docker's official `mcp/dockerhub` image
-- `plugins/gitlab`: remote MCP plugin for the official GitLab MCP server on `gitlab.com` with a note about the current hosted OAuth caveat
-- `plugins/github`: remote MCP plugin for official GitHub workflows through `https://api.githubcopilot.com/mcp/` with PAT header projection for all five targets
-- `plugins/firebase`: shared MCP plugin for Firebase via `firebase-tools mcp` with shared metadata and five targets (`claude`, `codex-package`, `gemini`, `opencode`, `cursor`)
-- `plugins/heroku`: hosted remote-only MCP plugin for Heroku apps, logs, add-ons, and platform operations via `https://mcp.heroku.com/mcp`
-- `plugins/hubspot-crm`: hosted remote MCP plugin for HubSpot CRM records, tickets, and reporting on `https://mcp.hubspot.com`
-- `plugins/hubspot-developer`: local stdio MCP plugin for HubSpot project, CMS, and build workflows via `@hubspot/cli@8.3.0`
-- `plugins/linear`: shared MCP plugin for Linear workspace, issue, and plan workflows via `https://mcp.linear.app/mcp`
-- `plugins/neon`: hosted remote MCP plugin for Neon database, branch, and project workflows via `https://mcp.neon.tech/mcp`
-- `plugins/notion`: hosted remote-only MCP plugin for interactive OAuth-backed access to Notion docs, pages, and workspace knowledge via `https://mcp.notion.com/mcp`
-- `plugins/slack`: hosted remote-only MCP plugin for Slack search, messaging, canvases, and user context via `https://mcp.slack.com/mcp`, intentionally scoped to Claude and Cursor because Slack documents client-specific app identity for that path
-- `plugins/stripe`: hosted remote-first MCP plugin for payments, billing, customers, and Stripe knowledge workflows via `https://mcp.stripe.com`
-- `plugins/vercel`: hosted remote-only MCP plugin for Vercel docs, projects, deployments, and logs via `https://mcp.vercel.com`
-- `plugins/sentry`: hosted remote-only MCP plugin for human-in-the-loop debugging, issues, traces, and incident workflows via `https://mcp.sentry.dev`
-- `plugins/supabase`: shared MCP plugin for Supabase project operations via `https://mcp.supabase.com/mcp`
-- `plugins/greptile`: shared MCP plugin for Greptile repository intelligence via `https://api.greptile.com/mcp`
+| Plugin | Transport | Entry point | Targets |
+| --- | --- | --- | --- |
+| `atlassian` | remote | `https://mcp.atlassian.com/v1/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `chrome-devtools` | stdio | `npx -y chrome-devtools-mcp@0.21.0` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `cloudflare` | remote | `https://mcp.cloudflare.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `cloudflare-bindings` | remote | `https://bindings.mcp.cloudflare.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `cloudflare-docs` | remote | `https://docs.mcp.cloudflare.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `cloudflare-observability` | remote | `https://observability.mcp.cloudflare.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `cloudflare-radar` | remote | `https://radar.mcp.cloudflare.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `context7` | stdio | `npx -y @upstash/context7-mcp@2.1.6` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `docker-hub` | stdio | `docker run -i --rm -e HUB_PAT_TOKEN mcp/dockerhub --transport=stdio --username=${env:HUB_USERNAME}` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `firebase` | stdio | `npx -y firebase-tools@latest mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `github` | remote | `https://api.githubcopilot.com/mcp/` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `gitlab` | remote | `https://gitlab.com/api/v4/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `greptile` | remote | `https://api.greptile.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `heroku` | remote | `https://mcp.heroku.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `hubspot-crm` | remote | `https://mcp.hubspot.com` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `hubspot-developer` | stdio | `npx -y -p @hubspot/cli@8.3.0 hs mcp start` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `linear` | remote | `https://mcp.linear.app/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `neon` | remote | `https://mcp.neon.tech/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `notion` | remote | `https://mcp.notion.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `sentry` | remote | `https://mcp.sentry.dev` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `slack` | remote | `https://mcp.slack.com/mcp` | Claude, Cursor |
+| `stripe` | remote | `https://mcp.stripe.com` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `supabase` | remote | `https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `vercel` | remote | `https://mcp.vercel.com` | Claude, Codex, Gemini, OpenCode, Cursor |
+
+`slack` intentionally remains `Claude` and `Cursor` only because Slack's hosted MCP flow is currently documented with client-specific app identity for that path.
 
 ## Discovery And Marketplace Use
 
-This repository now ships root marketplace catalogs for the ecosystems that officially support them:
+This repository now ships the root discovery artifacts each ecosystem actually supports:
 
 - Claude Code marketplace catalog: `.claude-plugin/marketplace.json`
 - Codex repo marketplace catalog: `.agents/plugins/marketplace.json`
+- Cursor marketplace catalog: `.cursor-plugin/marketplace.json`
+- Gemini bundled root extension: `gemini-extension.json`
 
 Claude Code can add this repository directly as a marketplace:
 
@@ -58,14 +64,20 @@ Then install any listed plugin:
 
 Codex reads repo-local marketplaces from `.agents/plugins/marketplace.json`. Clone this repository, open it as the working repo in Codex, and the marketplace will be available from the local repo catalog.
 
-Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository is a multi-plugin catalog, so it keeps per-plugin `gemini-extension.json` files under `plugins/*/` and is not a single gallery entry by itself.
+Cursor now follows the official repo-level marketplace layout used by Cursor plugin repositories and team marketplaces: `.cursor-plugin/marketplace.json` in the root, plus generated `plugins/*/.cursor-plugin/plugin.json` manifests for every installable plugin.
 
-Cursor and OpenCode do not currently use the same repo-root marketplace manifest pattern here. Their native generated artifacts stay committed inside each plugin directory.
+Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository now publishes a bundled root Gemini extension for gallery and scanner visibility, while keeping the authored per-plugin `gemini-extension.json` files under `plugins/*/`. The bundled root extension mirrors the 23 Gemini-compatible plugins from this catalog.
+
+OpenCode still relies on the native `opencode.json` artifacts committed inside each plugin directory.
 
 Marketplace drift is also gated in CI:
 
-- `python3 scripts/validate_marketplaces.py` verifies that the Claude and Codex root catalogs stay aligned with the checked-in plugin manifests under `plugins/*`
-- `.github/workflows/marketplace-visibility.yml` runs `codex-plugin-scanner==2.0.12` across the Claude, Codex, Gemini, and OpenCode ecosystems and uploads JSON scan artifacts for review
+- `python3 scripts/validate_marketplaces.py` verifies that the Claude, Codex, Cursor, and Gemini root discovery artifacts stay aligned with the checked-in plugin manifests under `plugins/*`
+- `python3 scripts/sync_cursor_marketplace.py` regenerates `.cursor-plugin/marketplace.json` and `plugins/*/.cursor-plugin/plugin.json`
+- `python3 scripts/sync_gemini_marketplace.py` regenerates the bundled root `gemini-extension.json`
+- `python3 scripts/package_gemini_extensions.py` builds release-ready Gemini archives for the bundled root extension plus every Gemini-compatible plugin
+- `.github/workflows/marketplace-visibility.yml` runs `codex-plugin-scanner==2.0.12` across the Claude, Codex, Gemini, and OpenCode ecosystems and uploads JSON scan artifacts for review, while the validate step separately gates Cursor marketplace drift
+- `.github/workflows/gemini-gallery-release.yml` packages Gemini archives on version tags and uploads them to GitHub Releases
 
 ## Layout
 

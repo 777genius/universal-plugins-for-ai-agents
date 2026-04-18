@@ -1,0 +1,22 @@
+{
+  "name": "cloudflare-docs",
+  "displayName": "cloudflare-docs",
+  "version": "0.1.0",
+  "description": "Official Cloudflare hosted MCP plugin for up-to-date Cloudflare documentation and reference lookups through Cloudflare's remote documentation server.",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Cloudflare"
+  },
+  "homepage": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+  "repository": "https://github.com/cloudflare/mcp",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai-agents",
+    "cloud",
+    "cloudflare",
+    "docs",
+    "mcp",
+    "plugins",
+    "research"
+  ]
+}

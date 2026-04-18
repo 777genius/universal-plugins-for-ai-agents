@@ -1,0 +1,21 @@
+{
+  "name": "greptile",
+  "displayName": "greptile",
+  "version": "0.1.0",
+  "description": "Official Greptile MCP integration for repository search and code intelligence tooling.",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Greptile"
+  },
+  "homepage": "https://greptile.com",
+  "repository": "https://github.com/greptile/greptile-mcp",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "code-search",
+    "greptile",
+    "mcp",
+    "plugins",
+    "repository"
+  ]
+}

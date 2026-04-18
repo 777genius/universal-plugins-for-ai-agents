@@ -25,6 +25,30 @@ jobs:
       - name: Validate marketplace catalogs stay in sync
         run: python3 scripts/validate_marketplaces.py
 
+  package-gemini-release-archives:
+    name: package-gemini-release-archives
+    needs: validate-marketplace-catalogs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Package Gemini release archives
+        run: python3 scripts/package_gemini_extensions.py --dest reports/gemini-release-archives
+
+      - name: Upload Gemini release archives
+        uses: actions/upload-artifact@v7
+        with:
+          name: gemini-release-archives
+          path: reports/gemini-release-archives
+          if-no-files-found: error
+
   scanner-visibility:
     name: scanner-${{ matrix.ecosystem }}
     needs: validate-marketplace-catalogs

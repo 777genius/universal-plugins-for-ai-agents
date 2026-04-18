@@ -1,0 +1,23 @@
+{
+  "name": "heroku",
+  "displayName": "heroku",
+  "version": "0.1.0",
+  "description": "Official Heroku hosted MCP plugin for apps, add-ons, logs, Postgres, and operational workflows through Heroku's remote MCP service.",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Heroku"
+  },
+  "homepage": "https://devcenter.heroku.com/articles/heroku-remote-mcp-server",
+  "repository": "https://github.com/heroku/heroku-mcp-server",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai-agents",
+    "apps",
+    "backend",
+    "cloud",
+    "devops",
+    "heroku",
+    "mcp",
+    "plugins"
+  ]
+}

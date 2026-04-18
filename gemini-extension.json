@@ -1,0 +1,124 @@
+{
+  "name": "universal-plugins-for-ai-agents",
+  "version": "0.1.0",
+  "description": "Bundled Gemini CLI extension that exposes the Gemini-compatible plugins from the universal-plugins-for-ai-agents catalog.",
+  "mcpServers": {
+    "atlassian": {
+      "httpUrl": "https://mcp.atlassian.com/v1/mcp"
+    },
+    "chrome-devtools": {
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@0.21.0"
+      ],
+      "command": "npx"
+    },
+    "cloudflare-api": {
+      "httpUrl": "https://mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-bindings": {
+      "httpUrl": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-docs": {
+      "httpUrl": "https://docs.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-observability": {
+      "httpUrl": "https://observability.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-radar": {
+      "httpUrl": "https://radar.mcp.cloudflare.com/mcp"
+    },
+    "context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@2.1.6"
+      ],
+      "command": "npx"
+    },
+    "dockerhub": {
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "HUB_PAT_TOKEN",
+        "mcp/dockerhub",
+        "--transport=stdio",
+        "--username=${env:HUB_USERNAME}"
+      ],
+      "command": "docker",
+      "env": {
+        "HUB_PAT_TOKEN": "${env:HUB_PAT_TOKEN}",
+        "HUB_USERNAME": "${env:HUB_USERNAME}"
+      }
+    },
+    "firebase": {
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "command": "npx"
+    },
+    "github": {
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "httpUrl": "https://api.githubcopilot.com/mcp/"
+    },
+    "gitlab": {
+      "httpUrl": "https://gitlab.com/api/v4/mcp"
+    },
+    "greptile": {
+      "headers": {
+        "Authorization": "Bearer ${GREPTILE_API_KEY}"
+      },
+      "httpUrl": "https://api.greptile.com/mcp"
+    },
+    "heroku": {
+      "httpUrl": "https://mcp.heroku.com/mcp"
+    },
+    "hubspot-crm": {
+      "httpUrl": "https://mcp.hubspot.com"
+    },
+    "hubspot-developer": {
+      "args": [
+        "-y",
+        "-p",
+        "@hubspot/cli@8.3.0",
+        "hs",
+        "mcp",
+        "start"
+      ],
+      "command": "npx",
+      "env": {
+        "HUBSPOT_CLI_VERSION": "8.3.0",
+        "HUBSPOT_MCP_STANDALONE": "true"
+      }
+    },
+    "linear": {
+      "httpUrl": "https://mcp.linear.app/mcp"
+    },
+    "neon": {
+      "httpUrl": "https://mcp.neon.tech/mcp"
+    },
+    "notion": {
+      "httpUrl": "https://mcp.notion.com/mcp"
+    },
+    "sentry": {
+      "httpUrl": "https://mcp.sentry.dev"
+    },
+    "stripe": {
+      "httpUrl": "https://mcp.stripe.com"
+    },
+    "supabase": {
+      "headers": {
+        "Authorization": "Bearer ${SUPABASE_ACCESS_TOKEN}"
+      },
+      "httpUrl": "https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}"
+    },
+    "vercel": {
+      "httpUrl": "https://mcp.vercel.com"
+    }
+  }
+}

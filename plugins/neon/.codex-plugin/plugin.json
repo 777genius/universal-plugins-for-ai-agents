@@ -16,5 +16,5 @@
   "mcpServers": "./.mcp.json",
   "name": "neon",
   "repository": "https://github.com/neondatabase/mcp-server-neon",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

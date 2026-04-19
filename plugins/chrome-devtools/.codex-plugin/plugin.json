@@ -16,5 +16,5 @@
   "mcpServers": "./.mcp.json",
   "name": "chrome-devtools",
   "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

@@ -1,6 +1,6 @@
 api_version: v1
 name: hubspot-developer
-version: 0.1.0
+version: 0.1.1
 description: Local HubSpot Developer MCP integration for project scaffolding, CMS, builds, logs, and app workflows via the HubSpot CLI.
 author:
     name: HubSpot

@@ -1,6 +1,6 @@
 api_version: v1
 name: slack
-version: 0.1.0
+version: 0.1.1
 description: Official Slack hosted MCP plugin for Slack search, messaging, canvases, and user context through Slack's remote MCP service.
 author:
     name: Slack

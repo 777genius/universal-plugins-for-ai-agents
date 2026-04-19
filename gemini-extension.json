@@ -1,6 +1,6 @@
 {
   "name": "universal-plugins-for-ai-agents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bundled Gemini CLI extension that exposes the Gemini-compatible plugins from the universal-plugins-for-ai-agents catalog.",
   "mcpServers": {
     "atlassian": {

@@ -66,7 +66,7 @@ Codex reads repo-local marketplaces from `.agents/plugins/marketplace.json`. Clo
 
 Cursor now follows the official repo-level marketplace layout used by Cursor plugin repositories and team marketplaces: `.cursor-plugin/marketplace.json` in the root, plus generated `plugins/*/.cursor-plugin/plugin.json` manifests for every installable plugin.
 
-Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository now publishes a bundled root Gemini extension for gallery and scanner visibility, while keeping the authored per-plugin `gemini-extension.json` files under `plugins/*/`. The bundled root extension mirrors the 23 Gemini-compatible plugins from this catalog.
+Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository now publishes a bundled root Gemini extension for gallery and scanner visibility, while keeping the authored per-plugin `gemini-extension.json` files under `plugins/*/`. The bundled root extension mirrors the 23 Gemini-compatible plugins from this catalog. Prebuilt Gemini archives are published on the GitHub Releases page for tagged versions.
 
 OpenCode still relies on the native `opencode.json` artifacts committed inside each plugin directory.
 

@@ -1,6 +1,6 @@
 api_version: v1
 name: context7
-version: 0.1.0
+version: 0.1.1
 description: Portable Context7 MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Pull up-to-date, version-specific documentation and code examples directly from source repositories into agent context.
 author:
     name: Upstash

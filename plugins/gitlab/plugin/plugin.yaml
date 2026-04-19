@@ -1,6 +1,6 @@
 api_version: v1
 name: gitlab
-version: 0.1.0
+version: 0.1.1
 description: Portable GitLab MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Connect agents to GitLab so they can inspect projects, issues, merge requests, and related DevOps workflows through the official GitLab MCP server over HTTP.
 author:
     name: GitLab

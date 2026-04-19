@@ -16,5 +16,5 @@
   "mcpServers": "./.mcp.json",
   "name": "greptile",
   "repository": "https://github.com/greptile/greptile-mcp",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

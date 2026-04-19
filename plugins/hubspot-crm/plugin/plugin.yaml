@@ -1,6 +1,6 @@
 api_version: v1
 name: hubspot-crm
-version: 0.1.0
+version: 0.1.1
 description: Official HubSpot remote MCP integration for beta, read-only CRM object access through HubSpot's hosted MCP server.
 author:
     name: HubSpot

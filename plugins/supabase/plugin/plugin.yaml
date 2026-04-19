@@ -1,6 +1,6 @@
 api_version: v1
 name: supabase
-version: 0.1.0
+version: 0.1.1
 description: Official Supabase MCP integration for development and database operations from agent workflows.
 author:
     name: Supabase

@@ -16,5 +16,5 @@
   "mcpServers": "./.mcp.json",
   "name": "docker-hub",
   "repository": "https://github.com/docker/hub-mcp",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

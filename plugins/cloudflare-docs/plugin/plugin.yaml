@@ -1,6 +1,6 @@
 api_version: v1
 name: cloudflare-docs
-version: 0.1.0
+version: 0.1.1
 description: Official Cloudflare hosted MCP plugin for up-to-date Cloudflare documentation and reference lookups through Cloudflare's remote documentation server.
 author:
     name: Cloudflare

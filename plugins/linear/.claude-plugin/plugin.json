@@ -2,5 +2,5 @@
   "description": "Official Linear MCP integration for workspace management, issues, and project workflows.",
   "mcpServers": "./.mcp.json",
   "name": "linear",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

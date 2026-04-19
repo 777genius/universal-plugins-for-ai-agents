@@ -1,6 +1,6 @@
 api_version: v1
 name: linear
-version: 0.1.0
+version: 0.1.1
 description: Official Linear MCP integration for workspace management, issues, and project workflows.
 author:
     name: Linear

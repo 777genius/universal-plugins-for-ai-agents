@@ -11,7 +11,7 @@ PLUGINS_ROOT = REPO_ROOT / "plugins"
 GEMINI_MARKETPLACE_PATH = REPO_ROOT / "gemini-extension.json"
 
 MARKETPLACE_NAME = "universal-plugins-for-ai-agents"
-MARKETPLACE_VERSION = "0.1.0"
+MARKETPLACE_VERSION = "0.1.1"
 MARKETPLACE_DESCRIPTION = (
     "Bundled Gemini CLI extension that exposes the Gemini-compatible plugins "
     "from the universal-plugins-for-ai-agents catalog."

@@ -1,7 +1,7 @@
 {
   "name": "cloudflare-bindings",
   "displayName": "cloudflare-bindings",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Cloudflare Workers Bindings MCP integration for storage, AI, and compute primitives.",
   "mcpServers": "./.mcp.json",
   "author": {

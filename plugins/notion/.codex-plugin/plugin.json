@@ -17,5 +17,5 @@
   "mcpServers": "./.mcp.json",
   "name": "notion",
   "repository": "https://github.com/makenotion/notion-mcp-server",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

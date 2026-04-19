@@ -2,5 +2,5 @@
   "description": "Official Docker Hub MCP plugin for repository, image, and Docker Hub workflows through Docker's containerized stdio server.",
   "mcpServers": "./.mcp.json",
   "name": "docker-hub",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

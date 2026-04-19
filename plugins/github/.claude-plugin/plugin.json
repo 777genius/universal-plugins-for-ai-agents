@@ -2,5 +2,5 @@
   "description": "Official GitHub MCP plugin for repository management. Create issues, manage pull requests, review code, search repositories, and interact with GitHub's full API directly from Claude Code.",
   "mcpServers": "./.mcp.json",
   "name": "github",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

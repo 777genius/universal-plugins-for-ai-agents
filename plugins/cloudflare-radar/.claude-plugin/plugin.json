@@ -2,5 +2,5 @@
   "description": "Official Cloudflare Radar MCP plugin for internet telemetry, traffic trends, and network intelligence through Cloudflare's hosted Radar server.",
   "mcpServers": "./.mcp.json",
   "name": "cloudflare-radar",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

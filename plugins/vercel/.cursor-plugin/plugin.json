@@ -1,7 +1,7 @@
 {
   "name": "vercel",
   "displayName": "vercel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Vercel hosted MCP plugin for project, deployment, log, and documentation workflows through Vercel's remote MCP service.",
   "mcpServers": "./.mcp.json",
   "author": {

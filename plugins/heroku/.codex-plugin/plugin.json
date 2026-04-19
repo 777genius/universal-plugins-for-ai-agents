@@ -18,5 +18,5 @@
   "mcpServers": "./.mcp.json",
   "name": "heroku",
   "repository": "https://github.com/heroku/heroku-mcp-server",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

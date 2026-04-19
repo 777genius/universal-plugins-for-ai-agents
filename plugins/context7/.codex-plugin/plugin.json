@@ -15,5 +15,5 @@
   "mcpServers": "./.mcp.json",
   "name": "context7",
   "repository": "https://github.com/upstash/context7",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

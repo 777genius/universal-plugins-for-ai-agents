@@ -1,7 +1,7 @@
 {
   "name": "sentry",
   "displayName": "sentry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Sentry hosted MCP plugin for human-in-the-loop debugging, issue triage, and incident workflows through Sentry's remote MCP service.",
   "mcpServers": "./.mcp.json",
   "author": {

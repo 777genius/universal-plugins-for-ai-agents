@@ -1,6 +1,6 @@
 api_version: v1
 name: neon
-version: 0.1.0
+version: 0.1.1
 description: Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.
 author:
     name: Neon

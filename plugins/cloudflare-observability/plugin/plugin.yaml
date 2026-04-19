@@ -1,6 +1,6 @@
 api_version: v1
 name: cloudflare-observability
-version: 0.1.0
+version: 0.1.1
 description: Official Cloudflare hosted MCP plugin for logs, analytics, and production debugging through Cloudflare's remote observability server.
 author:
     name: Cloudflare

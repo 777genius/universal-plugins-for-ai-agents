@@ -2,5 +2,5 @@
   "description": "Official Cloudflare hosted MCP plugin for logs, analytics, and production debugging through Cloudflare's remote observability server.",
   "mcpServers": "./.mcp.json",
   "name": "cloudflare-observability",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

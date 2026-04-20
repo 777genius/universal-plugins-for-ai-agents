@@ -88,7 +88,7 @@ OpenCode still relies on the native `opencode.json` artifacts committed inside e
 
 Marketplace drift is also gated in CI:
 
-- `python3 scripts/validate_marketplaces.py` verifies that the Claude, Codex, Cursor, and Gemini root discovery artifacts stay aligned with the checked-in plugin manifests under `plugins/*`
+- `python3 scripts/validate_marketplaces.py` verifies that the Claude, Codex, Cursor, and Gemini root discovery artifacts stay aligned with the checked-in plugin manifests under `plugins/*`, and also fails on duplicate MCP transport signatures across different plugins
 - `python3 scripts/sync_cursor_marketplace.py` regenerates `.cursor-plugin/marketplace.json` and `plugins/*/.cursor-plugin/plugin.json`
 - `python3 scripts/sync_gemini_marketplace.py` regenerates the bundled root `gemini-extension.json`
 - `python3 scripts/package_gemini_extensions.py` builds release-ready Gemini archives for the bundled root extension plus every Gemini-compatible plugin

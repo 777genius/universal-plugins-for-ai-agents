@@ -22,6 +22,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PLUGINS_ROOT = REPO_ROOT / "plugins"
 CLAUDE_MARKETPLACE_PATH = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 CODEX_MARKETPLACE_PATH = REPO_ROOT / ".agents" / "plugins" / "marketplace.json"
+MCP_CONFIG_PATH = ".mcp.json"
 
 MARKETPLACE_NAME = "universal-plugins-for-ai-agents"
 CLAUDE_OWNER_NAME = "777genius"
@@ -64,6 +65,60 @@ def discover_plugin_manifests(bundle_dir: str) -> dict[str, dict]:
         }
 
     return discovered
+
+
+def discover_transport_signatures() -> dict[str, list[dict[str, str]]]:
+    signatures: dict[str, list[dict[str, str]]] = {}
+
+    for mcp_path in sorted(PLUGINS_ROOT.glob(f"*/{MCP_CONFIG_PATH}")):
+        plugin_root = mcp_path.parent
+        plugin_name = plugin_root.name
+        doc = load_json(mcp_path)
+        servers = doc.get("mcpServers")
+        if not isinstance(servers, dict):
+            continue
+
+        for server_name, server in servers.items():
+            if not isinstance(server, dict):
+                continue
+
+            signature = None
+            if isinstance(server.get("url"), str) and server.get("url"):
+                signature = f"http::{server['url']}"
+            elif isinstance(server.get("command"), str) and server.get("command"):
+                args = server.get("args")
+                joined_args = ""
+                if isinstance(args, list):
+                    joined_args = " ".join(str(arg) for arg in args)
+                signature = f"stdio::{server['command']} {joined_args}".strip()
+
+            if signature is None:
+                continue
+
+            signatures.setdefault(signature, []).append(
+                {
+                    "plugin": plugin_name,
+                    "server": str(server_name),
+                    "path": str(mcp_path.relative_to(REPO_ROOT)),
+                }
+            )
+
+    return signatures
+
+
+def validate_unique_transport_signatures(errors: list[str]) -> None:
+    signatures = discover_transport_signatures()
+    for signature, entries in sorted(signatures.items()):
+        plugins = sorted({entry["plugin"] for entry in entries})
+        if len(plugins) <= 1:
+            continue
+        rendered_entries = ", ".join(
+            f"{entry['plugin']}:{entry['server']} ({entry['path']})" for entry in entries
+        )
+        errors.append(
+            "duplicate MCP transport detected across plugins: "
+            f"{signature!r} is used by {rendered_entries}"
+        )
 
 
 def validate_claude_marketplace(errors: list[str]) -> None:
@@ -256,6 +311,7 @@ def validate_gemini_marketplace(errors: list[str]) -> None:
 def main() -> int:
     errors: list[str] = []
 
+    validate_unique_transport_signatures(errors)
     validate_claude_marketplace(errors)
     validate_codex_marketplace(errors)
     validate_cursor_marketplace(errors)

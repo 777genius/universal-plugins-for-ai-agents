@@ -1,0 +1,13 @@
+api_version: v1
+
+servers:
+  figma:
+    description: Official Figma hosted MCP server for design context, code-to-canvas workflows, and authenticated access to Figma files over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://mcp.figma.com/mcp"
+    targets:
+      - claude
+      - codex-package
+      - cursor

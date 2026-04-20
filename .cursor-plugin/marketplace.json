@@ -64,6 +64,12 @@
       "version": "0.1.1"
     },
     {
+      "name": "figma",
+      "source": "figma",
+      "description": "Official Figma MCP plugin for design context, code-to-design workflows, and authenticated access to Figma Design, Make, and FigJam through Figma's remote MCP service.",
+      "version": "0.1.1"
+    },
+    {
       "name": "firebase",
       "source": "firebase",
       "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
@@ -133,6 +139,12 @@
       "name": "slack",
       "source": "slack",
       "description": "Official Slack hosted MCP plugin for Slack search, messaging, canvases, and user context through Slack's remote MCP service.",
+      "version": "0.1.1"
+    },
+    {
+      "name": "statsig",
+      "source": "statsig",
+      "description": "Official Statsig MCP plugin for experiments, feature flags, configs, metrics, and console workflows through Statsig's hosted MCP service.",
       "version": "0.1.1"
     },
     {

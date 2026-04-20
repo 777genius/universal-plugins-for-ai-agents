@@ -1,0 +1,16 @@
+api_version: v1
+name: google-calendar
+version: 0.1.1
+description: Anthropic-hosted Google Calendar connector plugin for Claude. Read calendars, manage events, and find availability through Claude's hosted MCP service.
+author:
+    name: Anthropic
+homepage: https://support.claude.com/en/articles/10166901-use-google-workspace-connectors
+keywords:
+    - ai-agents
+    - calendar
+    - google
+    - google-calendar
+    - mcp
+    - plugins
+targets:
+    - claude

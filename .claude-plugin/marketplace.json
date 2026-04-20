@@ -64,6 +64,12 @@
       "version": "0.1.1"
     },
     {
+      "name": "figma",
+      "source": "./plugins/figma",
+      "description": "Official Figma MCP plugin for design context, code-to-design workflows, and authenticated access to Figma Design, Make, and FigJam through Figma's remote MCP service.",
+      "version": "0.1.1"
+    },
+    {
       "name": "firebase",
       "source": "./plugins/firebase",
       "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase backend directly from your development workflow.",
@@ -79,6 +85,18 @@
       "name": "gitlab",
       "source": "./plugins/gitlab",
       "description": "Portable GitLab MCP plugin for Claude, Codex, Gemini, OpenCode, and Cursor. Connect agents to GitLab so they can inspect projects, issues, merge requests, and related DevOps workflows through the official GitLab MCP server over HTTP.",
+      "version": "0.1.1"
+    },
+    {
+      "name": "gmail",
+      "source": "./plugins/gmail",
+      "description": "Anthropic-hosted Gmail connector plugin for Claude. Search mail, read threads, inspect metadata, and draft Gmail messages through Claude's hosted MCP service.",
+      "version": "0.1.1"
+    },
+    {
+      "name": "google-calendar",
+      "source": "./plugins/google-calendar",
+      "description": "Anthropic-hosted Google Calendar connector plugin for Claude. Read calendars, manage events, and find availability through Claude's hosted MCP service.",
       "version": "0.1.1"
     },
     {
@@ -112,6 +130,12 @@
       "version": "0.1.1"
     },
     {
+      "name": "microsoft365",
+      "source": "./plugins/microsoft365",
+      "description": "Anthropic-hosted Microsoft 365 connector plugin for Claude. Search SharePoint and OneDrive, analyze Outlook email and calendar data, and pull Teams chat context through Claude's hosted MCP service.",
+      "version": "0.1.1"
+    },
+    {
       "name": "neon",
       "source": "./plugins/neon",
       "description": "Official Neon hosted MCP plugin for database, branch, and project workflows through Neon's remote MCP server.",
@@ -133,6 +157,12 @@
       "name": "slack",
       "source": "./plugins/slack",
       "description": "Official Slack hosted MCP plugin for Slack search, messaging, canvases, and user context through Slack's remote MCP service.",
+      "version": "0.1.1"
+    },
+    {
+      "name": "statsig",
+      "source": "./plugins/statsig",
+      "description": "Official Statsig MCP plugin for experiments, feature flags, configs, metrics, and console workflows through Statsig's hosted MCP service.",
       "version": "0.1.1"
     },
     {

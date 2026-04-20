@@ -1,0 +1,10 @@
+{
+  "description": "Official Statsig MCP plugin for experiments, feature flags, configs, metrics, and console workflows through Statsig's hosted MCP service.",
+  "mcpServers": {
+    "statsig": {
+      "httpUrl": "https://api.statsig.com/v1/mcp"
+    }
+  },
+  "name": "statsig",
+  "version": "0.1.1"
+}

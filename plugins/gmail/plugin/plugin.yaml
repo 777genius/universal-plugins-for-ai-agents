@@ -1,0 +1,16 @@
+api_version: v1
+name: gmail
+version: 0.1.1
+description: Anthropic-hosted Gmail connector plugin for Claude. Search mail, read threads, inspect metadata, and draft Gmail messages through Claude's hosted MCP service.
+author:
+    name: Anthropic
+homepage: https://support.claude.com/en/articles/10166901-use-google-workspace-connectors
+keywords:
+    - ai-agents
+    - email
+    - gmail
+    - mcp
+    - plugins
+    - productivity
+targets:
+    - claude

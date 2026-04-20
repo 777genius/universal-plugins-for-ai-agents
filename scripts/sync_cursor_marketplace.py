@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -29,10 +30,46 @@ def write_json(path: Path, doc: dict) -> None:
     path.write_text(json.dumps(doc, indent=2, sort_keys=False) + "\n")
 
 
+def load_plugin_targets(path: Path) -> list[str]:
+    targets: list[str] = []
+    in_targets_block = False
+
+    for raw_line in path.read_text().splitlines():
+        line = raw_line.rstrip()
+        stripped = line.strip()
+
+        if not stripped or stripped.startswith("#"):
+            continue
+
+        if in_targets_block:
+            if stripped.startswith("- "):
+                targets.append(stripped[2:].strip().strip('"').strip("'"))
+                continue
+            if re.match(r"^[A-Za-z0-9_-]+:", stripped):
+                in_targets_block = False
+
+        if stripped.startswith("targets:"):
+            value = stripped[len("targets:"):].strip()
+            if not value:
+                in_targets_block = True
+                continue
+            if value.startswith("[") and value.endswith("]"):
+                items = [item.strip().strip('"').strip("'") for item in value[1:-1].split(",")]
+                targets.extend([item for item in items if item])
+
+    return targets
+
+
 def discover_cursor_plugins() -> list[dict]:
     discovered: list[dict] = []
 
     for plugin_dir in sorted(p for p in PLUGINS_ROOT.iterdir() if p.is_dir()):
+        targets_path = plugin_dir / "plugin" / "plugin.yaml"
+        if not targets_path.exists():
+            continue
+        if "cursor" not in load_plugin_targets(targets_path):
+            continue
+
         source_manifest_path = plugin_dir / ".codex-plugin" / "plugin.json"
         if not source_manifest_path.exists():
             source_manifest_path = plugin_dir / ".claude-plugin" / "plugin.json"
@@ -98,6 +135,17 @@ def build_cursor_marketplace_doc(plugins: list[dict]) -> dict:
 
 def sync_cursor_marketplace() -> int:
     plugins = discover_cursor_plugins()
+    plugin_names = {plugin["name"] for plugin in plugins}
+
+    for plugin_dir in sorted(p for p in PLUGINS_ROOT.iterdir() if p.is_dir()):
+        if plugin_dir.name in plugin_names:
+            continue
+        stale_manifest = plugin_dir / ".cursor-plugin" / "plugin.json"
+        if stale_manifest.exists():
+            stale_manifest.unlink()
+        stale_dir = plugin_dir / ".cursor-plugin"
+        if stale_dir.exists() and not any(stale_dir.iterdir()):
+            stale_dir.rmdir()
 
     for plugin in plugins:
         write_json(plugin["plugin_dir"] / ".cursor-plugin" / "plugin.json", plugin["cursor_manifest"])

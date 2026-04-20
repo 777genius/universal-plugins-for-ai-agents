@@ -2,7 +2,9 @@
 
 Universal plugin catalog for AI agents.
 
-This repository holds portable, production-ready plugin directories that already support multiple agents:
+This repository holds portable, production-ready plugin directories plus a small number of honest agent-specific hosted connector entries where the vendor only documents one supported lane today.
+
+The catalog currently covers install paths across these agent ecosystems:
 
 - Claude
 - Codex
@@ -24,22 +26,36 @@ Current plugins:
 | `context7` | stdio | `npx -y @upstash/context7-mcp@2.1.6` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `docker-hub` | stdio | `docker run -i --rm -e HUB_PAT_TOKEN mcp/dockerhub --transport=stdio --username=${env:HUB_USERNAME}` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `firebase` | stdio | `npx -y firebase-tools@latest mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `figma` | remote | `https://mcp.figma.com/mcp` | Claude, Codex, Cursor |
 | `github` | remote | `https://api.githubcopilot.com/mcp/` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `gitlab` | remote | `https://gitlab.com/api/v4/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `gmail` | remote | `https://gmail.mcp.claude.com/mcp` | Claude |
+| `google-calendar` | remote | `https://gcal.mcp.claude.com/mcp` | Claude |
 | `greptile` | remote | `https://api.greptile.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `heroku` | remote | `https://mcp.heroku.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `hubspot-crm` | remote | `https://mcp.hubspot.com` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `hubspot-developer` | stdio | `npx -y -p @hubspot/cli@8.3.0 hs mcp start` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `linear` | remote | `https://mcp.linear.app/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
+| `microsoft365` | remote | `https://microsoft365.mcp.claude.com/mcp` | Claude |
 | `neon` | remote | `https://mcp.neon.tech/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `notion` | remote | `https://mcp.notion.com/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `sentry` | remote | `https://mcp.sentry.dev` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `slack` | remote | `https://mcp.slack.com/mcp` | Claude, Cursor |
+| `statsig` | remote | `https://api.statsig.com/v1/mcp` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `stripe` | remote | `https://mcp.stripe.com` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `supabase` | remote | `https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `vercel` | remote | `https://mcp.vercel.com` | Claude, Codex, Gemini, OpenCode, Cursor |
 
 `slack` intentionally remains `Claude` and `Cursor` only. Slack's current MCP docs list Claude.ai, Claude Code, Cursor, and Perplexity as supported partner clients, but this catalog only ships targets that overlap with the current `plugin-kit-ai` target model and official connection flows. Perplexity is not a target in this catalog, and Slack does not currently document hosted MCP connection flows here for Codex, Gemini, or OpenCode.
+
+`figma` intentionally remains `Claude`, `Codex`, and `Cursor` only. Figma's current remote MCP docs explicitly limit hosted access to clients listed in the Figma MCP Catalog, and the published install guides in this area are for Claude Code, Codex, Cursor, and VS Code, not Gemini or OpenCode.
+
+`gmail`, `google-calendar`, and `microsoft365` intentionally remain `Claude` only. Anthropic documents these as Claude-hosted connectors, and its official open-source Claude plugin examples wire them only inside Claude plugin `.mcp.json` configs, not as general hosted connection flows for Codex, Gemini, OpenCode, or Cursor.
+
+Coverage notes for the screenshot-aligned app set:
+
+- `Teams`, `SharePoint`, `Outlook Email`, and `Outlook Calendar` are represented by the single canonical `microsoft365` plugin because Anthropic documents one Microsoft 365 connector spanning all four surfaces, not four separate hosted MCP servers.
+- `Google Drive` is intentionally documented as a native Claude integration gap here, not shipped as a catalog plugin. Anthropic's current official plugin examples publish hosted MCP URLs for `gmail`, `google-calendar`, and `microsoft365`, but do not publish a standalone Google Drive MCP endpoint in the same packageable form.
 
 ## Discovery And Marketplace Use
 
@@ -66,7 +82,7 @@ Codex reads repo-local marketplaces from `.agents/plugins/marketplace.json`. Clo
 
 Cursor now follows the official repo-level marketplace layout used by Cursor plugin repositories and team marketplaces: `.cursor-plugin/marketplace.json` in the root, plus generated `plugins/*/.cursor-plugin/plugin.json` manifests for every installable plugin.
 
-Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository now publishes a bundled root Gemini extension for gallery and scanner visibility, while keeping the authored per-plugin `gemini-extension.json` files under `plugins/*/`. The bundled root extension mirrors the 23 Gemini-compatible plugins from this catalog. Prebuilt Gemini archives are published on the GitHub Releases page for tagged versions.
+Gemini is different. Official Gemini gallery indexing is repository-rooted and expects a public repository with `gemini-extension.json` at the repository root or archive root plus the `gemini-cli-extension` GitHub topic. This repository now publishes a bundled root Gemini extension for gallery and scanner visibility, while keeping the authored per-plugin `gemini-extension.json` files under `plugins/*/`. The bundled root extension mirrors the 24 Gemini-compatible plugins from this catalog. Prebuilt Gemini archives are published on the GitHub Releases page for tagged versions.
 
 OpenCode still relies on the native `opencode.json` artifacts committed inside each plugin directory.
 

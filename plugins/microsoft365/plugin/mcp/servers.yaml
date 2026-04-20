@@ -1,0 +1,11 @@
+api_version: v1
+
+servers:
+  microsoft365:
+    description: Anthropic-hosted Microsoft 365 connector for Claude over remote streamable HTTP.
+    type: remote
+    remote:
+      protocol: streamable_http
+      url: "https://microsoft365.mcp.claude.com/mcp"
+    targets:
+      - claude

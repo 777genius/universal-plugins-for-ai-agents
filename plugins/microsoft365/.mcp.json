@@ -1,0 +1,6 @@
+{
+  "microsoft365": {
+    "type": "http",
+    "url": "https://microsoft365.mcp.claude.com/mcp"
+  }
+}

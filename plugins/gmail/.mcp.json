@@ -1,0 +1,6 @@
+{
+  "gmail": {
+    "type": "http",
+    "url": "https://gmail.mcp.claude.com/mcp"
+  }
+}

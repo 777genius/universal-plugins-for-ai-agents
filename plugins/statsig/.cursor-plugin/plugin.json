@@ -1,0 +1,19 @@
+{
+  "name": "statsig",
+  "displayName": "statsig",
+  "version": "0.1.1",
+  "description": "Official Statsig MCP plugin for experiments, feature flags, configs, metrics, and console workflows through Statsig's hosted MCP service.",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Statsig"
+  },
+  "homepage": "https://docs.statsig.com/integrations/mcp/overview",
+  "keywords": [
+    "ai-agents",
+    "experimentation",
+    "feature-flags",
+    "mcp",
+    "plugins",
+    "statsig"
+  ]
+}

@@ -1,0 +1,17 @@
+api_version: v1
+name: microsoft365
+version: 0.1.1
+description: Anthropic-hosted Microsoft 365 connector plugin for Claude. Search SharePoint and OneDrive, analyze Outlook email and calendar data, and pull Teams chat context through Claude's hosted MCP service.
+author:
+    name: Anthropic
+homepage: https://support.claude.com/en/articles/12542951-enable-and-use-the-microsoft-365-connector
+keywords:
+    - ai-agents
+    - mcp
+    - microsoft365
+    - outlook
+    - plugins
+    - sharepoint
+    - teams
+targets:
+    - claude

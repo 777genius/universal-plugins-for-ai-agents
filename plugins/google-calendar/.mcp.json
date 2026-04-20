@@ -1,0 +1,6 @@
+{
+  "google-calendar": {
+    "type": "http",
+    "url": "https://gcal.mcp.claude.com/mcp"
+  }
+}

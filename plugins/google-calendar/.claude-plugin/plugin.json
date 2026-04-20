@@ -1,0 +1,6 @@
+{
+  "description": "Anthropic-hosted Google Calendar connector plugin for Claude. Read calendars, manage events, and find availability through Claude's hosted MCP service.",
+  "mcpServers": "./.mcp.json",
+  "name": "google-calendar",
+  "version": "0.1.1"
+}

@@ -1,0 +1,18 @@
+{
+  "author": {
+    "name": "Figma"
+  },
+  "description": "Official Figma MCP plugin for design context, code-to-design workflows, and authenticated access to Figma Design, Make, and FigJam through Figma's remote MCP service.",
+  "homepage": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/",
+  "keywords": [
+    "ai-agents",
+    "design",
+    "figma",
+    "mcp",
+    "plugins",
+    "ui"
+  ],
+  "mcpServers": "./.mcp.json",
+  "name": "figma",
+  "version": "0.1.1"
+}

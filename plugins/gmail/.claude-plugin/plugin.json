@@ -1,0 +1,6 @@
+{
+  "description": "Anthropic-hosted Gmail connector plugin for Claude. Search mail, read threads, inspect metadata, and draft Gmail messages through Claude's hosted MCP service.",
+  "mcpServers": "./.mcp.json",
+  "name": "gmail",
+  "version": "0.1.1"
+}

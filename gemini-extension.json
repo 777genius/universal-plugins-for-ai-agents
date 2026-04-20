@@ -108,6 +108,9 @@
     "sentry": {
       "httpUrl": "https://mcp.sentry.dev"
     },
+    "statsig": {
+      "httpUrl": "https://api.statsig.com/v1/mcp"
+    },
     "stripe": {
       "httpUrl": "https://mcp.stripe.com"
     },

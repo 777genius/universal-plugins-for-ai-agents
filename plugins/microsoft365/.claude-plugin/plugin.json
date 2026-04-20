@@ -1,0 +1,6 @@
+{
+  "description": "Anthropic-hosted Microsoft 365 connector plugin for Claude. Search SharePoint and OneDrive, analyze Outlook email and calendar data, and pull Teams chat context through Claude's hosted MCP service.",
+  "mcpServers": "./.mcp.json",
+  "name": "microsoft365",
+  "version": "0.1.1"
+}

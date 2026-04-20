@@ -39,7 +39,7 @@ Current plugins:
 | `supabase` | remote | `https://mcp.supabase.com/mcp?project_ref=${SUPABASE_PROJECT_REF}` | Claude, Codex, Gemini, OpenCode, Cursor |
 | `vercel` | remote | `https://mcp.vercel.com` | Claude, Codex, Gemini, OpenCode, Cursor |
 
-`slack` intentionally remains `Claude` and `Cursor` only because Slack's hosted MCP flow is currently documented with client-specific app identity for that path.
+`slack` intentionally remains `Claude` and `Cursor` only. Slack's current MCP docs list Claude.ai, Claude Code, Cursor, and Perplexity as supported partner clients, but this catalog only ships targets that overlap with the current `plugin-kit-ai` target model and official connection flows. Perplexity is not a target in this catalog, and Slack does not currently document hosted MCP connection flows here for Codex, Gemini, or OpenCode.
 
 ## Discovery And Marketplace Use
 
